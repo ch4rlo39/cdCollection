@@ -1,0 +1,461 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-09-14 21:08+0000\n"
+"PO-Revision-Date: 2020-09-21 13:51-0400\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: \n"
+"Language: es_ES\n"
+
+#: Controller/CdsController.php:79 Controller/CdsController.php:105
+msgid "The cd has been saved."
+msgstr "El cd se ha guardado."
+
+#: Controller/CdsController.php:83 Controller/CdsController.php:109
+msgid "The cd could not be saved. Please, try again."
+msgstr "No se pudo guardar el CD. Inténtalo de nuevo."
+
+#: Controller/CdsController.php:128
+msgid "The cd has been deleted."
+msgstr "El cd ha sido eliminado."
+
+#: Controller/CdsController.php:130
+msgid "The cd could not be deleted. Please, try again."
+msgstr "No se pudo borrar el CD. Inténtalo de nuevo."
+
+#: Controller/GenresController.php:54 Controller/GenresController.php:79
+msgid "The genre has been saved."
+msgstr ""
+
+#: Controller/GenresController.php:58 Controller/GenresController.php:83
+msgid "The genre could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/GenresController.php:101
+msgid "The genre has been deleted."
+msgstr ""
+
+#: Controller/GenresController.php:103
+msgid "The genre could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/ReviewsController.php:59
+msgid "Review must be added from a CD"
+msgstr "La reseña debe agregarse desde un CD"
+
+#: Controller/ReviewsController.php:68 Controller/ReviewsController.php:94
+msgid "The review has been saved."
+msgstr "La reseña se ha guardado."
+
+#: Controller/ReviewsController.php:72 Controller/ReviewsController.php:98
+msgid "The review could not be saved. Please, try again."
+msgstr "No se pudo guardar la reseña. Inténtalo de nuevo."
+
+#: Controller/ReviewsController.php:116
+msgid "The review has been deleted."
+msgstr "La reseña ha sido eliminada."
+
+#: Controller/ReviewsController.php:118
+msgid "The review could not be deleted. Please, try again."
+msgstr "No se pudo eliminar la reseña. Inténtalo de nuevo."
+
+#: Controller/RolesController.php:54 Controller/RolesController.php:78
+msgid "The role has been saved."
+msgstr ""
+
+#: Controller/RolesController.php:58 Controller/RolesController.php:82
+msgid "The role could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/RolesController.php:99
+msgid "The role has been deleted."
+msgstr ""
+
+#: Controller/RolesController.php:101
+msgid "The role could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:55 Controller/UsersController.php:79
+msgid "The user has been saved."
+msgstr "El usuario ha sido guardado."
+
+#: Controller/UsersController.php:59 Controller/UsersController.php:83
+msgid "The user could not be saved. Please, try again."
+msgstr "No se pudo guardar al usuario. Inténtalo de nuevo."
+
+#: Controller/UsersController.php:100
+msgid "The user has been deleted."
+msgstr "El usuario ha sido eliminado."
+
+#: Controller/UsersController.php:102
+msgid "The user could not be deleted. Please, try again."
+msgstr "No se pudo eliminar al usuario. Inténtalo de nuevo."
+
+#: Template/Cds/add.ctp:9 Template/Cds/edit.ctp:9 Template/Cds/index.ctp:9
+#: Template/Cds/index.ctp:29 Template/Cds/view.ctp:9 Template/Cds/view.ctp:64
+#: Template/Cds/view.ctp:90 Template/Genres/add.ctp:9
+#: Template/Genres/edit.ctp:9 Template/Genres/index.ctp:9
+#: Template/Genres/index.ctp:22 Template/Genres/view.ctp:9
+#: Template/Genres/view.ctp:42 Template/Reviews/add.ctp:9
+#: Template/Reviews/edit.ctp:9 Template/Reviews/index.ctp:9
+#: Template/Reviews/index.ctp:25 Template/Reviews/view.ctp:9
+#: Template/Roles/add.ctp:9 Template/Roles/edit.ctp:9
+#: Template/Roles/index.ctp:9 Template/Roles/index.ctp:22
+#: Template/Roles/view.ctp:9 Template/Roles/view.ctp:46
+#: Template/Users/add.ctp:9 Template/Users/edit.ctp:9
+#: Template/Users/index.ctp:9 Template/Users/index.ctp:29
+#: Template/Users/view.ctp:9 Template/Users/view.ctp:64
+msgid "Actions"
+msgstr "Acciones"
+
+#: Template/Cds/add.ctp:10 Template/Cds/edit.ctp:16 Template/Cds/view.ctp:12
+#: Template/Genres/add.ctp:11 Template/Genres/edit.ctp:17
+#: Template/Genres/index.ctp:11 Template/Genres/view.ctp:14
+#: Template/Reviews/add.ctp:11 Template/Reviews/edit.ctp:17
+#: Template/Reviews/index.ctp:11 Template/Reviews/view.ctp:14
+#: Template/Users/add.ctp:13 Template/Users/edit.ctp:19
+#: Template/Users/index.ctp:13 Template/Users/view.ctp:16
+msgid "List Cds"
+msgstr "Lista de Cds"
+
+#: Template/Cds/add.ctp:11 Template/Cds/edit.ctp:17 Template/Cds/index.ctp:11
+#: Template/Cds/view.ctp:14 Template/Roles/add.ctp:11
+#: Template/Roles/edit.ctp:17 Template/Roles/index.ctp:11
+#: Template/Roles/view.ctp:14 Template/Users/add.ctp:10
+#: Template/Users/edit.ctp:16 Template/Users/view.ctp:12
+msgid "List Users"
+msgstr "Lista de usuarios"
+
+#: Template/Cds/add.ctp:12 Template/Cds/edit.ctp:18 Template/Cds/index.ctp:12
+#: Template/Cds/view.ctp:15 Template/Roles/add.ctp:12
+#: Template/Roles/edit.ctp:18 Template/Roles/index.ctp:12
+#: Template/Roles/view.ctp:15 Template/Users/index.ctp:10
+#: Template/Users/view.ctp:13
+msgid "New User"
+msgstr "Nuevo usuario"
+
+#: Template/Cds/add.ctp:13 Template/Cds/edit.ctp:19 Template/Cds/index.ctp:13
+#: Template/Cds/view.ctp:16 Template/Genres/add.ctp:10
+#: Template/Genres/edit.ctp:16 Template/Genres/view.ctp:12
+msgid "List Genres"
+msgstr ""
+
+#: Template/Cds/add.ctp:14 Template/Cds/edit.ctp:20 Template/Cds/index.ctp:14
+#: Template/Cds/view.ctp:17 Template/Genres/index.ctp:10
+#: Template/Genres/view.ctp:13
+msgid "New Genre"
+msgstr ""
+
+#: Template/Cds/add.ctp:20
+msgid "Add Cd"
+msgstr "Agregar Cd"
+
+#: Template/Cds/add.ctp:27 Template/Cds/edit.ctp:34 Template/Genres/add.ctp:24
+#: Template/Genres/edit.ctp:30 Template/Reviews/add.ctp:24
+#: Template/Reviews/edit.ctp:30 Template/Roles/add.ctp:24
+#: Template/Roles/edit.ctp:30 Template/Users/add.ctp:28
+#: Template/Users/edit.ctp:34
+msgid "Submit"
+msgstr "Enviar"
+
+#: Template/Cds/edit.ctp:11 Template/Cds/index.ctp:45 Template/Cds/view.ctp:73
+#: Template/Cds/view.ctp:105 Template/Genres/edit.ctp:11
+#: Template/Genres/index.ctp:33 Template/Genres/view.ctp:56
+#: Template/Reviews/edit.ctp:11 Template/Reviews/index.ctp:39
+#: Template/Roles/edit.ctp:11 Template/Roles/index.ctp:33
+#: Template/Roles/view.ctp:60 Template/Users/edit.ctp:11
+#: Template/Users/index.ctp:45 Template/Users/view.ctp:78
+msgid "Delete"
+msgstr "Eliminar"
+
+#: Template/Cds/edit.ctp:13 Template/Cds/index.ctp:45 Template/Cds/view.ctp:11
+#: Template/Cds/view.ctp:73 Template/Cds/view.ctp:105
+#: Template/Genres/edit.ctp:13 Template/Genres/index.ctp:33
+#: Template/Genres/view.ctp:11 Template/Genres/view.ctp:56
+#: Template/Reviews/edit.ctp:13 Template/Reviews/index.ctp:39
+#: Template/Reviews/view.ctp:11 Template/Roles/edit.ctp:13
+#: Template/Roles/index.ctp:33 Template/Roles/view.ctp:11
+#: Template/Roles/view.ctp:60 Template/Users/edit.ctp:13
+#: Template/Users/index.ctp:45 Template/Users/view.ctp:11
+#: Template/Users/view.ctp:78
+msgid "Are you sure you want to delete # {0}?"
+msgstr "¿Estás seguro de que quieres eliminar?"
+
+#: Template/Cds/edit.ctp:26 Template/Cds/view.ctp:10
+msgid "Edit Cd"
+msgstr "Editar cd"
+
+#: Template/Cds/index.ctp:10 Template/Cds/view.ctp:13
+#: Template/Genres/add.ctp:12 Template/Genres/edit.ctp:18
+#: Template/Genres/index.ctp:12 Template/Genres/view.ctp:15
+#: Template/Reviews/add.ctp:12 Template/Reviews/edit.ctp:18
+#: Template/Reviews/index.ctp:12 Template/Reviews/view.ctp:15
+#: Template/Users/add.ctp:14 Template/Users/edit.ctp:20
+#: Template/Users/index.ctp:14 Template/Users/view.ctp:17
+msgid "New Cd"
+msgstr "Nuevo cd"
+
+#: Template/Cds/index.ctp:18
+msgid "Cds"
+msgstr ""
+
+#: Template/Cds/index.ctp:43 Template/Cds/view.ctp:71 Template/Cds/view.ctp:101
+#: Template/Genres/index.ctp:31 Template/Genres/view.ctp:54
+#: Template/Reviews/index.ctp:37 Template/Roles/index.ctp:31
+#: Template/Roles/view.ctp:58 Template/Users/index.ctp:43
+#: Template/Users/view.ctp:76
+msgid "View"
+msgstr "Ver"
+
+#: Template/Cds/index.ctp:44 Template/Cds/view.ctp:72 Template/Cds/view.ctp:103
+#: Template/Genres/index.ctp:32 Template/Genres/view.ctp:55
+#: Template/Reviews/index.ctp:38 Template/Roles/index.ctp:32
+#: Template/Roles/view.ctp:59 Template/Users/index.ctp:44
+#: Template/Users/view.ctp:77
+msgid "Edit"
+msgstr "Editar"
+
+#: Template/Cds/index.ctp:53 Template/Genres/index.ctp:41
+#: Template/Reviews/index.ctp:47 Template/Roles/index.ctp:41
+#: Template/Users/index.ctp:53
+msgid "first"
+msgstr "primero"
+
+#: Template/Cds/index.ctp:54 Template/Genres/index.ctp:42
+#: Template/Reviews/index.ctp:48 Template/Roles/index.ctp:42
+#: Template/Users/index.ctp:54
+msgid "previous"
+msgstr "previo"
+
+#: Template/Cds/index.ctp:56 Template/Genres/index.ctp:44
+#: Template/Reviews/index.ctp:50 Template/Roles/index.ctp:44
+#: Template/Users/index.ctp:56
+msgid "next"
+msgstr "siguiente"
+
+#: Template/Cds/index.ctp:57 Template/Genres/index.ctp:45
+#: Template/Reviews/index.ctp:51 Template/Roles/index.ctp:45
+#: Template/Users/index.ctp:57
+msgid "last"
+msgstr "Último"
+
+#: Template/Cds/index.ctp:59 Template/Genres/index.ctp:47
+#: Template/Reviews/index.ctp:53 Template/Roles/index.ctp:47
+#: Template/Users/index.ctp:59
+msgid ""
+"Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
+"total"
+msgstr ""
+"Página {{page}} de {{pages}}, que muestra {{current}} registro (s) de "
+"{{count}} total"
+
+#: Template/Cds/view.ctp:11
+msgid "Delete Cd"
+msgstr "Eliminar Cd"
+
+#: Template/Cds/view.ctp:21 Template/Reviews/index.ctp:10
+#: Template/Reviews/view.ctp:13
+msgid "New Review"
+msgstr "Nuevo aviso"
+
+#: Template/Cds/view.ctp:29
+msgid "User"
+msgstr "Usuario"
+
+#: Template/Cds/view.ctp:33 Template/Genres/view.ctp:37
+#: Template/Users/view.ctp:59
+msgid "Title"
+msgstr "Título"
+
+#: Template/Cds/view.ctp:37 Template/Genres/view.ctp:38
+#: Template/Users/view.ctp:60
+msgid "Slug"
+msgstr ""
+
+#: Template/Cds/view.ctp:41 Template/Genres/view.ctp:39
+#: Template/Users/view.ctp:61
+msgid "Artist"
+msgstr "Artista"
+
+#: Template/Cds/view.ctp:45 Template/Cds/view.ctp:62
+#: Template/Genres/view.ctp:26 Template/Genres/view.ctp:35
+#: Template/Reviews/view.ctp:30 Template/Roles/view.ctp:26
+#: Template/Roles/view.ctp:39 Template/Users/view.ctp:40
+#: Template/Users/view.ctp:57
+msgid "Id"
+msgstr ""
+
+#: Template/Cds/view.ctp:49 Template/Genres/view.ctp:40
+#: Template/Reviews/view.ctp:34 Template/Roles/view.ctp:44
+#: Template/Users/view.ctp:44 Template/Users/view.ctp:62
+msgid "Created"
+msgstr "Creado"
+
+#: Template/Cds/view.ctp:53 Template/Genres/view.ctp:41
+#: Template/Reviews/view.ctp:38 Template/Roles/view.ctp:45
+#: Template/Users/view.ctp:48 Template/Users/view.ctp:63
+msgid "Modified"
+msgstr "Modificado"
+
+#: Template/Cds/view.ctp:58
+msgid "Related Genres"
+msgstr ""
+
+#: Template/Cds/view.ctp:63 Template/Genres/view.ctp:22
+#: Template/Reviews/view.ctp:26 Template/Roles/view.ctp:22
+msgid "Name"
+msgstr ""
+
+#: Template/Cds/view.ctp:81
+msgid "Related Reviews"
+msgstr ""
+
+#: Template/Genres/add.ctp:18
+msgid "Add Genre"
+msgstr ""
+
+#: Template/Genres/edit.ctp:24 Template/Genres/view.ctp:10
+msgid "Edit Genre"
+msgstr ""
+
+#: Template/Genres/index.ctp:16
+msgid "Genres"
+msgstr ""
+
+#: Template/Genres/view.ctp:11
+msgid "Delete Genre"
+msgstr ""
+
+#: Template/Genres/view.ctp:31 Template/Users/view.ctp:53
+msgid "Related Cds"
+msgstr ""
+
+#: Template/Genres/view.ctp:36 Template/Users/view.ctp:58
+msgid "User Id"
+msgstr ""
+
+#: Template/Layout/default.ctp:51
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: Template/Layout/default.ctp:53
+msgid "Login"
+msgstr "Iniciar sesión"
+
+#: Template/Layout/error.ctp:36
+msgid "Error"
+msgstr ""
+
+#: Template/Layout/error.ctp:44
+msgid "Back"
+msgstr "atrás"
+
+#: Template/Reviews/add.ctp:10 Template/Reviews/edit.ctp:16
+#: Template/Reviews/view.ctp:12
+msgid "List Reviews"
+msgstr ""
+
+#: Template/Reviews/add.ctp:18
+msgid "Add Review"
+msgstr ""
+
+#: Template/Reviews/edit.ctp:24 Template/Reviews/view.ctp:10
+msgid "Edit Review"
+msgstr ""
+
+#: Template/Reviews/index.ctp:16
+msgid "Reviews"
+msgstr ""
+
+#: Template/Reviews/view.ctp:11
+msgid "Delete Review"
+msgstr ""
+
+#: Template/Reviews/view.ctp:22
+msgid "Cd"
+msgstr ""
+
+#: Template/Reviews/view.ctp:43
+msgid "Review"
+msgstr "Aviso"
+
+#: Template/Roles/add.ctp:10 Template/Roles/edit.ctp:16
+#: Template/Roles/view.ctp:12 Template/Users/add.ctp:11
+#: Template/Users/edit.ctp:17 Template/Users/index.ctp:11
+#: Template/Users/view.ctp:14
+msgid "List Roles"
+msgstr ""
+
+#: Template/Roles/add.ctp:18
+msgid "Add Role"
+msgstr ""
+
+#: Template/Roles/edit.ctp:24 Template/Roles/view.ctp:10
+msgid "Edit Role"
+msgstr ""
+
+#: Template/Roles/index.ctp:10 Template/Roles/view.ctp:13
+#: Template/Users/add.ctp:12 Template/Users/edit.ctp:18
+#: Template/Users/index.ctp:12 Template/Users/view.ctp:15
+msgid "New Role"
+msgstr ""
+
+#: Template/Roles/index.ctp:16
+msgid "Roles"
+msgstr ""
+
+#: Template/Roles/view.ctp:11
+msgid "Delete Role"
+msgstr ""
+
+#: Template/Roles/view.ctp:31
+msgid "Description"
+msgstr ""
+
+#: Template/Roles/view.ctp:35
+msgid "Related Users"
+msgstr ""
+
+#: Template/Roles/view.ctp:40
+msgid "Role Id"
+msgstr ""
+
+#: Template/Roles/view.ctp:41 Template/Users/view.ctp:28
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: Template/Roles/view.ctp:42 Template/Users/view.ctp:32
+msgid "Email"
+msgstr ""
+
+#: Template/Roles/view.ctp:43 Template/Users/view.ctp:36
+msgid "Password"
+msgstr "Contraseña"
+
+#: Template/Users/add.ctp:20
+msgid "Add User"
+msgstr ""
+
+#: Template/Users/edit.ctp:26 Template/Users/view.ctp:10
+msgid "Edit User"
+msgstr ""
+
+#: Template/Users/index.ctp:18
+msgid "Users"
+msgstr "Usuarios"
+
+#: Template/Users/view.ctp:11
+msgid "Delete User"
+msgstr "Borrar usuario"
+
+#: Template/Users/view.ctp:24
+msgid "Role"
+msgstr ""
