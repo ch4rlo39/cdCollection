@@ -18,7 +18,7 @@ class UsersController extends AppController {
     
     public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['logout', 'add']);
+        $this->Auth->allow(['logout', 'add', 'confirm', 'userSendsConfirmationEmail']);
         $this->Auth->deny(['view','index']);
     }
     
@@ -139,6 +139,9 @@ class UsersController extends AppController {
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
+                if($user['confirmed'] == 0){
+                    $this->Flash->success('You can\'t add a new CD until your email address is confirmed');
+                }
                 return $this->redirect($this->Auth->redirectUrl());
             }
             $this->Flash->error('Your username or password is incorrect.');
@@ -155,6 +158,13 @@ class UsersController extends AppController {
     public function sendConfirmationEmail($user) {
         $email = new Email('default');
         $email->setTo($user->email)->subject(__('Confirm your email'))->send('http://' . $_SERVER['HTTP_HOST'] . $this->request->webroot . 'users/confirm/' . $user->uuid);
+    }
+    
+    public function userSendsConfirmationEmail($courriel, $uuid) {
+        $email = new Email('default');
+        $email->setTo($courriel)->subject(__('Confirm your email'))->send('http://' . $_SERVER['HTTP_HOST'] . $this->request->webroot . 'users/confirm/' . $uuid);
+        $this->Flash->success(__('The confirmation message has been sent to your email address'));
+        return $this->redirect(['controller' => 'cds', 'action' => 'index']);
     }
     
     public function confirm($uuid){

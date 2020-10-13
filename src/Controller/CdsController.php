@@ -16,13 +16,18 @@ class CdsController extends AppController
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
         
-        if(in_array($action, ['add', 'tags'])){
-            return true;
+        if(in_array($action, ['add'])){
+            if($user['confirmed'] == 1){
+                return true;
+            } else {
+                return false;
+            }
         }
         
         if($user['role_id'] == 1) {
             return true;
         }
+        
         
         $slug = $this->request->getParam('pass.0');
         if(!$slug) {

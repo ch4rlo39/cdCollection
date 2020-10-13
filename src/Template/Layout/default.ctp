@@ -46,6 +46,21 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li><?= $this->Html->link(__('Home'), ['controller' => 'cds', 'action' => 'index']) ?></li>
                 <li>
                     <?php
+                    $userlog = $this->request->getSession()->read('Auth.User');
+                    if($userlog) {
+                        $confirmed = $userlog['confirmed'];
+                        if($confirmed == 1) {
+                            echo $this->Html->link(__('Confirmed'), ['controller' => 'Cds', 'action' => 'index']);
+                        } else {
+                            $email = $userlog['email'];
+                            $uuid = $userlog['uuid'];
+                            echo $this->Html->link(__('Confirm email address'), ['controller' => 'Users', 'action' => 'userSendsConfirmationEmail', $email, $uuid]);
+                        }
+                    }
+                    ?>
+                </li>
+                <li>
+                    <?php
                     $loguser = $this->request->getSession()->read('Auth.User');
                     if($loguser){
                         $user = $loguser['email'];
@@ -59,8 +74,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?></li>
                 <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?></li>
                 <li><?= $this->Html->link('Español', ['action' => 'changeLang', 'es_ES'], ['escape' => false]) ?></li>
-                <li><a target="_blank" href="https://book.cakephp.org/3/">Documentation</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
+                <li><?= $this->Html->link(__('À propos'), ['controller' => 'Pages', 'action' => 'aPropos']) ?></li>
             </ul>
         </div>
     </nav>
