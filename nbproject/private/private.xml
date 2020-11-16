@@ -3,8 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Program%20Files/Ampps/www/A2020/CD_Collection_v0_6_2/src/Model/Table/GenresTable.php</file>
-            <file>file:/C:/Program%20Files/Ampps/www/A2020/CD_Collection_v0_6_2/src/Model/Table/CdsTable.php</file>
+            <file>file:/C:/Program%20Files/Ampps/www/A2020/CD_Collection_v0_7_1/src/Template/Layout/TwitterBootstrap/dashboard.ctp</file>
+            <file>file:/C:/Program%20Files/Ampps/www/A2020/CD_Collection_v0_7_1/src/Template/Admin/GenreFamilies/index.ctp</file>
+            <file>file:/C:/Program%20Files/Ampps/www/A2020/CD_Collection_v0_7_1/src/Template/Admin/GenreFamilies/edit.ctp</file>
+            <file>file:/C:/Program%20Files/Ampps/www/A2020/CD_Collection_v0_7_1/src/Template/Admin/GenreFamilies/view.ctp</file>
+            <file>file:/C:/Program%20Files/Ampps/www/A2020/CD_Collection_v0_7_1/src/Template/Admin/GenreFamilies/add.ctp</file>
         </group>
     </open-files>
 </project-private>

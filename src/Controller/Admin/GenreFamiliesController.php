@@ -16,6 +16,7 @@ class GenreFamiliesController extends AppController
     public function initialize() {
         parent::initialize();
         $this->Auth->deny(['view','index', 'add', 'edit', 'delete']);
+        //$this->viewBuilder()->setLayout('cakephp_default_admin');
     }
     
     public function isAuthorized($user) {
