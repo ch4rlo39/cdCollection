@@ -282,7 +282,7 @@ return [
              */
             'username' => 'root',
             'password' => 'mysql',
-            'database' => 'cd_collection_v0_5_1',
+            'database' => 'cd_collection_v0_6_2',
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).
              */

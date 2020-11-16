@@ -1,3 +1,4 @@
+
 <div style="text-align: center">
     <h1>Charles-Olivier Allard</h1>
     <h2>420-5B7 MO Applications Internet</h2>
@@ -6,78 +7,59 @@
 
 <div>
     <ol>
-        <li>Remise du lien GitHub et page À propos : 
-            <ol>
+        <li>Remise du lien GitHub : 
+            <ul>
                 <li><a href="https://github.com/ch4rlo39/cdCollection">https://github.com/ch4rlo39/cdCollection</a></li>
-                <li>.../pages/a-propos</li>
-            </ol>
+            </ul>
         </li><br>
-        <li>Ces étapes permettent de vérifier les exigences du TP1 : 
+        <li>Ces étapes permettent de vérifier les exigences du TP2 : 
             <ol>
-                <li>BD avec hasMany (1-n) et belongsToMany (n-n) : 
+                <li>JQuery-ui Autocomplete : 
                     <ol>
-                        <li>.../users permet de constater l'association hasMany en sélectionnant un utilisateur et en voyant les CDs créés par cet utilisateur</li>
-                        <li>.../cds permet de constater l'associer belongsToMany entre les CDs et les Genres. Sélectionner un CD et constater les Genres liés à celui-ci</li>
+                        <li>Utiliser l'option Autocomplétion du menu pour accéder à la page d'ajout de CD (nécessite d'être connecté)</li>
+                        <li>Entrer une lettre dans le champ Artiste et constater la liste des artistes contenant la lettre entrée</li>
+                        <li>Cliquer sur un artiste dans la liste pour confirmer l'autocomplétion</li>
                     </ol>
                 </li><br>
-                <li>cake bake pour 5 tables + validations : 
+                <li>Listes liées par Ajax : 
                     <ol>
-                        <li>Les tables de contenu sont les suivantes : Users, CDs, Reviews, Covers et Genres</li>
-                        <li>L'application est basée sur le résusltat des modèles, vues et controleurs obtenus à partir de la commande cake bake all pour chaque table</li>
+                        <li>Utiliser l'option Liste liées du menu afin d'accéder à la page d'ajout de genre musical (nécessite d'être connecté)</li>
+                        <li>Modifier la sélection du champ Genre Family et constater le changement des options du champ Genre Subfamily</li>
                     </ol>
                 </li><br>
-                <li>Actions et infos en menu pour trois types d'utilisateurs : 
+                <li>Lecture et suppression en Ajax et Rest : 
                     <ol>
-                        <li>Les utilisateurs ayant le rôle d'administrateur ont accès à l'intégralité du site</li>
-                        <li>Les utilisateurs ayant le rôle de vendeur n'ont accès qu'aux CDs qu'ils ont ajoutés
-                            <ol>
-                                <li>Démarrez une session en tant que vendeur --> email : vendorbob@email.com | password : vendorbob</li>
-                                <li>Essayez de modifier un CD appartenant à Bob --> l'accès est autorisé</li>
-                                <li>Ensuite, essayez de modifier un CD appartenant à un autre utilisateur --> l'accès est refusé</li>
-                            </ol>
-                        </li>
-                        <li>Les visiteurs ne peuvent qu'afficher les CDs. Ils ne peuvent pas en ajouter ni les modifier
-                            <ol>
-                                <li>En tant que visiteur, essayez d'ajouter un CD --> l'accès est refusé</li>
-                                <li>En tant que visiteur, essayez de modifier un CD --> l'accès est refusé</li>
-                            </ol>
-                        </li>
-                        <li>Le menu indique si un utilisateur est en session. Si oui, on voit son courriel et un lien pour se déconnecter. Sinon, il y a un lien pour se connecter</li>
+                        <li>Utiliser l'option Monopage du menu pour accéder à la liste des Genre Families en application monopage</li>
+                        <li>Constater l'affichage des Genre Families</li>
+                        <li>Cliquer sur le bouton delete du Genre Family "Test TP2" et confirmer la suppression</li>
+                        <li>Constater la suppression du Genre Family "Test TP2"</li>
                     </ol>
                 </li><br>
-                <li>Traduction i18n en français et 3ième langue : 
+                <li>Ajout et modification en Ajax et Rest : 
                     <ol>
-                        <li>Une partie de l'interface et du contenu du site est disponible en anglais, en français et en espagnol : 
-                            <ol>
-                                <li>Il est possible de changer la langue en tout temps en la sélectionnant dans le menu</li>
-                                <li>Le contenu des avis (reviews) peut être traduit, afficher un avis et changer la langue pour le constater</li>
-                            </ol>
-                        </li>
+                        <li>Utiliser l'option Monopage du menu pour accéder à la liste des Genre Families en application monopage</li>
+                        <li>Cliquer sur le bouton New Genre Family, entrer un nom de Genre Family et cliquer sur SUBMIT</li>
+                        <li>Constater l'ajout du nouveau Genre Family</li>
+                        <li>Cliquer sur le bouton edit d'un Genre Family, modifier son nom et cliquer sur SUBMIT</li>
+                        <li>Constater la modification du Genre Family</li>
                     </ol>
                 </li><br>
-                <li>Gestion multilingue du contenu de la BD : 
+                <li>Interface avec préfize de routage "Admin" : 
                     <ol>
-                        <li>Voir le point 4</li>
+                        <li>Utiliser l'option Admin du menu pour accéder à la liste des Genre Families en mode Admin avec le préfixe de routage "Admin"</li>
                     </ol>
                 </li><br>
-                <li>Téléversement et affichage d'images liées : 
+                <li>Interface adaptative Bootstrap : 
                     <ol>
-                        <li>Ajoutez une image via ".../covers/add"</li>
-                        <li>Une fois l'image ajoutée, il est possible de la lier à un CD : 
-                            <ol>
-                                <li>Ajoutez ou modifiez un CD et sélectionnez l'image juste ajoutée</li>
-                                <li>Vous pouvez voir l'image en affichant la liste des CDs ou le CD directement</li>
-                            </ol>
-                        </li>
+                        <li>Utiliser l'option Admin du menu pour accéder à la liste des Genre Families avec l'interface Bootstrap</li>
+                        <li>Modifier la taille de la fenêtre pour constater l'adaptation de l'interface Bootstrap</li>
                     </ol>
                 </li><br>
-                <li>Envoi d'un courriel de confirmation avec UUID : 
+                <li>Affichage d'un document pdf : 
                     <ol>
-                        <li>Connectez-vous en tant qu'adminitrateur : <br> email : test@test.com | password : motdepasse</li>
-                        <li>Ajoutez un nouvel utilisateur via ".../users/add"</li>
-                        <li>Donnez une adresse courriel valide à laquelle vous pouvez accéder</li>
-                        <li>Allez cliquer sur le lien du courriel reçu à la dite adresse</li>
-                        <li>Un message de confirmation apparaît à l'écran</li>
+                        <li>Accéder à l'écran d'accueil de l'application (liste des CDs)</li>
+                        <li>Cliquer sur l'action "(pdf)" associée à un CD pour que celui-ci s'affiche dans un fichier pdf</li>
+                        <li>Constater l'affichage du CD dans un fichier pdf</li>
                     </ol>
                 </li><br>
             </ol>

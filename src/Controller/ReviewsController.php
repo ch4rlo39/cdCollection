@@ -15,6 +15,7 @@ class ReviewsController extends AppController
     
     public function initialize() {
         parent::initialize();
+        $this->viewBuilder()->setLayout('cakephp_default');
         $this->Auth->allow(['add']);
     }
     

@@ -41,6 +41,14 @@ class GenresTable extends Table
             'targetForeignKey' => 'cd_id',
             'joinTable' => 'cds_genres',
         ]);
+        $this->belongsTo('GenreFamilies', [
+            'foreignKey' => 'genre_family_id',
+            'joinType' => 'INNER'
+        ]);
+        $this->belongsTo('GenreSubfamilies', [
+            'foreignKey' => 'genre_subfamily_id',
+            'joinType' => 'INNER'
+        ]);
     }
 
     /**

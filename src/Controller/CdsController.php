@@ -13,6 +13,11 @@ use App\Controller\AppController;
 class CdsController extends AppController
 {
     
+    public function initialize() {
+        parent::initialize();
+        $this->viewBuilder()->setLayout('cakephp_default');
+    }
+    
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
         
@@ -47,7 +52,7 @@ class CdsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Users', 'Covers'],
+            'contain' => ['Users', 'Covers', 'Artists'],
         ];
         $cds = $this->paginate($this->Cds);
 
@@ -63,7 +68,7 @@ class CdsController extends AppController
      */
     public function view($slug = null)
     {
-        $cd = $this->Cds->find()->where(['Cds.slug' => $slug]) -> contain(['Reviews', 'Users', 'Genres', 'Covers']) -> firstOrFail();
+        $cd = $this->Cds->find()->where(['Cds.slug' => $slug]) -> contain(['Reviews', 'Users', 'Genres', 'Covers', 'Artists']) -> firstOrFail();
         $this->set(compact('cd'));
     }
 
@@ -90,7 +95,8 @@ class CdsController extends AppController
         $users = $this->Cds->Users->find('list', ['limit' => 200]);
         $genres = $this->Cds->Genres->find('list', ['limit' => 200]);
         $covers = $this->Cds->Covers->find('list', ['limit' => 200]);
-        $this->set(compact('cd', 'users', 'genres', 'covers'));
+        $artists = $this->Cds->Artists->find('list', ['limit' => 200]);
+        $this->set(compact('cd', 'users', 'genres', 'covers', 'artists'));
     }
 
     /**
@@ -102,7 +108,7 @@ class CdsController extends AppController
      */
     public function edit($slug)
     {
-        $cd = $this->Cds->findBySlug($slug)->contain('Genres')->firstOrFail();
+        $cd = $this->Cds->findBySlug($slug)->contain(['Genres', 'Covers', 'Artists'])->firstOrFail();
         if ($this->request->is(['patch', 'post', 'put'])) {
             $this->Cds->patchEntity($cd, $this->request->getData(), [
                 'accessibleFields' => ['user_id' => false]
@@ -117,7 +123,8 @@ class CdsController extends AppController
         $users = $this->Cds->Users->find('list', ['limit' => 200]);
         $genres = $this->Cds->Genres->find('list', ['limit' => 200]);
         $covers = $this->Cds->Covers->find('list', ['limit' => 200]);
-        $this->set(compact('cd', 'users', 'genres', 'covers'));
+        $artists = $this->Cds->Artists->find('list', ['limit' => 200]);
+        $this->set(compact('cd', 'users', 'genres', 'covers', 'artists'));
     }
 
     /**

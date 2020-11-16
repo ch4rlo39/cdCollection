@@ -12,6 +12,11 @@ use App\Controller\AppController;
  */
 class CoversController extends AppController
 {
+    
+     public function initialize() {
+         parent::initialize();
+         $this->viewBuilder()->setLayout('cakephp_default');
+     }
     /**
      * Index method
      *

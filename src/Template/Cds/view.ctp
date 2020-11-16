@@ -35,7 +35,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Artist') ?></th>
-            <td><?= h($cd->artist) ?></td>
+            <td><?= h($cd->artist['name']) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Released') ?></th>

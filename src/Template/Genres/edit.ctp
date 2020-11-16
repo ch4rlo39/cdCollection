@@ -1,4 +1,12 @@
 <?php
+$urlToLinkedListFilter = $this->Url->build([
+    "controller" => "GenreSubfamilies",
+    "action" => "getByGenreFamily",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
+echo $this->Html->script('Genres/add_edit', ['block' => 'scriptBottom']);
+?><?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Genre $genre
@@ -23,8 +31,9 @@
     <fieldset>
         <legend><?= __('Edit Genre') ?></legend>
         <?php
+            echo $this->Form->control('genre_family_id', ['options' => $genreFamilies]);
+            echo $this->Form->control('genre_subfamily_id', ['options' => [__('Please select a Genre Family first')]]);
             echo $this->Form->control('name');
-            echo $this->Form->control('cds._ids', ['options' => $cds]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

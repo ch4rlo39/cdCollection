@@ -25,5 +25,7 @@ class Genre extends Entity
     protected $_accessible = [
         'name' => true,
         'cds' => true,
+        'genre_family_id' => true,
+        'genre_subfamily_id' =>true,
     ];
 }

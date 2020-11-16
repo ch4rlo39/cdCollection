@@ -26,6 +26,14 @@
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($genre->id) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Genre Family') ?></th>
+            <td><?= h($genre->genre_family->name) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Genre Subfamily') ?></th>
+            <td><?= h($genre->genre_subfamily->name) ?></td>
+        </tr>
     </table>
     <div class="related">
         <h4><?= __('Related Cds') ?></h4>
@@ -58,6 +66,8 @@
             </tr>
             <?php endforeach; ?>
         </table>
+        <?php else : ?>
+        <h5>There is no CD related to this genre</h5>
         <?php endif; ?>
     </div>
 </div>

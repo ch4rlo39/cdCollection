@@ -3164,3 +3164,905 @@ Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 140
 
 
 
+2020-10-30 00:09:14 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "genres" (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:487)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1632): Cake\ORM\Query->firstOrFail()
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\src\Controller\GenresController.php(37): Cake\ORM\Table->get(Array, Array)
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\GenresController->view('11')
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\GenresController))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /genres/view/11
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_1/genres
+
+
+2020-10-30 00:10:14 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'genre_family_id' doesn't have a default value (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(342): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(2136): Cake\Database\Query->execute()
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(2028): Cake\ORM\Table->_insert(Object(App\Model\Entity\Genre), Array)
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1941): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Genre), Object(ArrayObject))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1646): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(746): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1647): Cake\Database\Connection->transactional(Object(Closure))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1942): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\src\Controller\GenresController.php(53): Cake\ORM\Table->save(Object(App\Model\Entity\Genre))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\GenresController->add()
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\GenresController))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\webroot\index.php(40): Cake\Http\Server->run()
+#35 {main}
+Request URL: /genres/add
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_1/genres/add
+
+
+2020-10-30 00:14:05 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'genre_family_id' doesn't have a default value (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(342): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(2136): Cake\Database\Query->execute()
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(2028): Cake\ORM\Table->_insert(Object(App\Model\Entity\Genre), Array)
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1941): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Genre), Object(ArrayObject))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1646): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(746): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1647): Cake\Database\Connection->transactional(Object(Closure))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1942): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\src\Controller\GenresController.php(53): Cake\ORM\Table->save(Object(App\Model\Entity\Genre))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\GenresController->add()
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\GenresController))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\webroot\index.php(40): Cake\Http\Server->run()
+#35 {main}
+Request URL: /genres/add
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_1/genres/add
+
+
+2020-10-30 00:15:04 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'genre_family_id' doesn't have a default value (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(342): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(2136): Cake\Database\Query->execute()
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(2028): Cake\ORM\Table->_insert(Object(App\Model\Entity\Genre), Array)
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1941): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Genre), Object(ArrayObject))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1646): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(746): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1647): Cake\Database\Connection->transactional(Object(Closure))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1942): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\src\Controller\GenresController.php(53): Cake\ORM\Table->save(Object(App\Model\Entity\Genre))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\GenresController->add()
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\GenresController))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\webroot\index.php(40): Cake\Http\Server->run()
+#35 {main}
+Request URL: /genres/add
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_1/genres/add
+
+
+2020-11-01 16:47:34 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'artist_id' doesn't have a default value (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(342): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(2136): Cake\Database\Query->execute()
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(2028): Cake\ORM\Table->_insert(Object(App\Model\Entity\Cd), Array)
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1941): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Cd), Object(ArrayObject))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1646): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(746): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1647): Cake\Database\Connection->transactional(Object(Closure))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1942): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\src\Controller\CdsController.php(83): Cake\ORM\Table->save(Object(App\Model\Entity\Cd))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\CdsController->add()
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CdsController))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#34 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\webroot\index.php(40): Cake\Http\Server->run()
+#35 {main}
+Request URL: /cds/add
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_1/cds/add
+
+
+2020-11-01 16:53:25 Warning: Warning (2): Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) in [C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\src\Template\Cds\add.ctp, line 32]
+Request URL: /cds/add
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_1/users/login?redirect=%2Fcds%2Fadd
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\Cds\add.ctp, line 32
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1435
+Cake\View\View::_render() - CORE\src\View\View.php, line 1393
+Cake\View\View::render() - CORE\src\View\View.php, line 892
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 791
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 256
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2020-11-01 18:07:59 Error: [Cake\Controller\Exception\MissingActionException] Action ArtistsController::findArtists() could not be found, or is not accessible. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Controller\Controller.php:596)
+Exception Attributes: array (
+  'controller' => 'ArtistsController',
+  'action' => 'findArtists',
+  'prefix' => '',
+  'plugin' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArtistsController))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /artists/find-artists.json?term=H
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_1/cds/add
+
+
+2020-11-01 18:17:48 Error: [PDOException] SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Hôte inconnu.  (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Driver.php:93)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=oui;...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=oui;...', Array)
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Query.php(267): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Query.php(167): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\UsersTable))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1785): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\UsersTable))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1368): Cake\ORM\Table->query()
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Association.php(1119): Cake\ORM\Table->find('list', Array)
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\src\Controller\CdsController.php(90): Cake\ORM\Association->find('list', Array)
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\CdsController->add()
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CdsController))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#29 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#31 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\webroot\index.php(40): Cake\Http\Server->run()
+#34 {main}
+Caused by: [PDOException] PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Hï¿½te inconnu.  (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Driver.php:93)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=oui;...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=oui;...', Array)
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Query.php(267): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Query.php(167): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\UsersTable))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1785): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\UsersTable))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Table.php(1368): Cake\ORM\Table->query()
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\ORM\Association.php(1119): Cake\ORM\Table->find('list', Array)
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\src\Controller\CdsController.php(90): Cake\ORM\Association->find('list', Array)
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\CdsController->add()
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CdsController))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#29 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#31 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\webroot\index.php(40): Cake\Http\Server->run()
+#34 {main}
+Request URL: /cds/add
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_1/users/login?redirect=%2Fcds%2Fadd
+
+
+2020-11-01 18:22:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /js/Cds/add_edit/pet.js
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_1/cds/add
+
+
+2020-11-01 18:24:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_1\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /js/Cds/add_edit/artistsAutocomplete.js
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_1/cds/add
+
+
+2020-11-11 15:43:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Genre_families could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Genre_families',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /genre_families
+
+
+2020-11-11 15:46:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Api could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Api',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /api/genreFamilies/1
+
+
+2020-11-11 15:46:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Api could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Api',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /api/genreFamilies/
+
+
+2020-11-11 15:47:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Api could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Api',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /api/genreFamilies
+
+
+2020-11-11 15:50:10 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Api could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Api',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /api/genreFamilies/
+
+
+2020-11-11 19:22:38 Error: [Cake\Http\Exception\InvalidCsrfTokenException] CSRF token mismatch. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:232)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(152): Cake\Http\Middleware\CsrfProtectionMiddleware->_validateToken(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(122): Cake\Http\Middleware\CsrfProtectionMiddleware->_validateAndUnsetTokenField(Object(Cake\Http\ServerRequest))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#15 {main}
+Request URL: /genreFamilyAction.php
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_2/genreFamilies
+
+
+2020-11-11 19:22:49 Error: [Cake\Http\Exception\InvalidCsrfTokenException] CSRF token mismatch. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:232)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(152): Cake\Http\Middleware\CsrfProtectionMiddleware->_validateToken(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(122): Cake\Http\Middleware\CsrfProtectionMiddleware->_validateAndUnsetTokenField(Object(Cake\Http\ServerRequest))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#15 {main}
+Request URL: /api/genre_families
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_2/genreFamilies
+
+
+2020-11-11 19:58:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class GenresFamilies could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'GenresFamilies',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /genresFamilies
+
+
+2020-11-12 15:57:55 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin\GenreFamilies\index.ctp" is missing. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Admin\\GenreFamilies\\index.ctp',
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\View\View.php(888): Cake\View\View->_getViewFileName('Admin\\GenreFami...')
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\GenreFamiliesController))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#17 {main}
+Request URL: /admin/genreFamilies
+
+
+2020-11-12 16:30:46 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Users could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Users',
+  'plugin' => false,
+  'prefix' => 'admin',
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#15 {main}
+Request URL: /admin/users/login?redirect=%2Fadmin%2FgenreFamilies
+
+
+2020-11-16 19:14:15 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Users could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Users',
+  'plugin' => false,
+  'prefix' => 'admin',
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#15 {main}
+Request URL: /admin/users/login?redirect=%2Fadmin%2FgenreFamilies
+
+
+2020-11-16 19:15:27 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Users could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Users',
+  'plugin' => false,
+  'prefix' => 'admin',
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#15 {main}
+Request URL: /admin/users/login?redirect=%2Fadmin%2FgenreFamilies
+
+
+2020-11-16 19:16:14 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin\Users\login.ctp" is missing. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Admin\\Users\\login.ctp',
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\View\View.php(888): Cake\View\View->_getViewFileName('Admin\\Users\\log...')
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\UsersController))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#17 {main}
+Request URL: /admin/users/login?redirect=%2Fadmin%2FgenreFamilies
+
+
+2020-11-16 19:19:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class GenreSubfamilies could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'GenreSubfamilies',
+  'plugin' => false,
+  'prefix' => 'admin',
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#15 {main}
+Request URL: /admin/genre-subfamilies
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_2/admin/genre-families/add
+
+
+2020-11-16 19:25:49 Error: [Cake\Routing\Exception\MissingControllerException] Controller class GenreSubfamilies could not be found. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'GenreSubfamilies',
+  'plugin' => false,
+  'prefix' => 'admin',
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#15 {main}
+Request URL: /admin/genre-subfamilies/view/1
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_2/admin/genre-families/view/1
+
+
+2020-11-16 20:05:41 Error: [Cake\View\Exception\MissingLayoutException] Layout file "Layout\pdf\cakephp_default.ctp" is missing. (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\View\View.php:1699)
+Exception Attributes: array (
+  'file' => 'Layout\\pdf\\cakephp_default.ctp',
+)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\View\View.php(921): Cake\View\View->_getLayoutFileName('cakephp_default')
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\View\View.php(897): Cake\View\View->renderLayout('', 'cakephp_default')
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CdsController))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+Request URL: /cds/view/panic.pdf
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_2/
+
+
+2020-11-16 21:00:17 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`cd_collection_v0_6_2`.`genre_subfamilies`, CONSTRAINT `genre_subfamilies_ibfk_1` FOREIGN KEY (`genre_family_id`) REFERENCES `genre_families` (`id`)) (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Connection.php(342): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\ORM\Table.php(2514): Cake\Database\Query->execute()
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\ORM\Table.php(2350): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\GenreFamily), Object(ArrayObject))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\ORM\Table.php(1646): Cake\ORM\Table->Cake\ORM\{closure}()
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Connection.php(746): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\ORM\Table.php(1647): Cake\Database\Connection->transactional(Object(Closure))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\ORM\Table.php(2351): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\src\Controller\Api\GenreFamiliesController.php(64): Cake\ORM\Table->delete(Object(App\Model\Entity\GenreFamily))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\Api\GenreFamiliesController->delete('11')
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Api\GenreFamiliesController))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#30 {main}
+Request URL: /api/genre_families/11
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_2/genre-families
+
+
+2020-11-16 21:02:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`cd_collection_v0_6_2`.`genre_subfamilies`, CONSTRAINT `genre_subfamilies_ibfk_1` FOREIGN KEY (`genre_family_id`) REFERENCES `genre_families` (`id`)) (C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Connection.php(342): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\ORM\Table.php(2514): Cake\Database\Query->execute()
+#8 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\ORM\Table.php(2350): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\GenreFamily), Object(ArrayObject))
+#9 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\ORM\Table.php(1646): Cake\ORM\Table->Cake\ORM\{closure}()
+#10 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Database\Connection.php(746): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#11 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\ORM\Table.php(1647): Cake\Database\Connection->transactional(Object(Closure))
+#12 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\ORM\Table.php(2351): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#13 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\src\Controller\Api\GenreFamiliesController.php(64): Cake\ORM\Table->delete(Object(App\Model\Entity\GenreFamily))
+#14 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\Api\GenreFamiliesController->delete('1')
+#15 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#16 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Api\GenreFamiliesController))
+#17 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\A2020\CD_Collection_v0_6_2\webroot\index.php(40): Cake\Http\Server->run()
+#30 {main}
+Request URL: /api/genre_families/1
+Referer URL: http://localhost/A2020/CD_Collection_v0_6_2/genre-families
+
+

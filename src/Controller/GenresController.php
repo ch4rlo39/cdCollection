@@ -12,6 +12,11 @@ use App\Controller\AppController;
  */
 class GenresController extends AppController
 {
+    public function initialize() {
+        parent::initialize();
+        $this->viewBuilder()->setLayout('cakephp_default');
+    }
+    
     /**
      * Index method
      *
@@ -34,7 +39,7 @@ class GenresController extends AppController
     public function view($id = null)
     {
         $genre = $this->Genres->get($id, [
-            'contain' => ['Cds'],
+            'contain' => ['Cds', 'GenreFamilies', 'GenreSubfamilies'],
         ]);
 
         $this->set('genre', $genre);
@@ -58,7 +63,9 @@ class GenresController extends AppController
             $this->Flash->error(__('The genre could not be saved. Please, try again.'));
         }
         $cds = $this->Genres->Cds->find('list', ['limit' => 200]);
-        $this->set(compact('genre', 'cds'));
+        $genreFamilies = $this->Genres->GenreFamilies->find('list', ['limit' => 200]);
+        $genreSubfamilies = $this->Genres->GenreSubfamilies->find('list', ['limit' => 200]);
+        $this->set(compact('genre', 'cds', 'genreFamilies', 'genreSubfamilies'));
     }
 
     /**
@@ -83,7 +90,9 @@ class GenresController extends AppController
             $this->Flash->error(__('The genre could not be saved. Please, try again.'));
         }
         $cds = $this->Genres->Cds->find('list', ['limit' => 200]);
-        $this->set(compact('genre', 'cds'));
+        $genreFamilies = $this->Genres->GenreFamilies->find('list', ['limit' => 200]);
+        $genreSubfamilies = $this->Genres->GenreSubfamilies->find('list', ['limit' => 200]);
+        $this->set(compact('genre', 'cds', 'genreFamilies', 'genreSubfamilies'));
     }
 
     /**

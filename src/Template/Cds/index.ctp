@@ -4,6 +4,7 @@
  * @var \App\Model\Entity\Cd[]|\Cake\Collection\CollectionInterface $cds
  */
 ?>
+
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -12,7 +13,8 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Genres'), ['controller' => 'Genres', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Genre'), ['controller' => 'Genres', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Covers'), ['controller' => 'Covers', 'actions' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Covers'), ['controller' => 'Covers', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('GenreFamilies'), ['controller' => 'GenreFamilies', 'action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="cds index large-9 medium-8 columns content">
@@ -22,7 +24,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('artist') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('artist_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('released') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('cover') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -33,7 +35,7 @@
             <tr>
                 <td><?= $cd->has('user') ? $this->Html->link($cd->user->username, ['controller' => 'Users', 'action' => 'view', $cd->user_id]) : '' ?></td>
                 <td><?= h($cd->title) ?></td>
-                <td><?= h($cd->artist) ?></td>
+                <td><?= $cd->has('artist') ? h($cd->artist->name) : '' ?></td>
                 <td><?= h($cd->released) ?></td>
                 <td><?php 
                     if(isset($cd->covers[0])) {
@@ -48,6 +50,7 @@
                ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $cd->slug]) ?>
+                    <?= $this->Html->link('(pdf)', ['action' => 'view', $cd->slug . '.pdf']) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cd->slug]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $cd->slug], ['confirm' => __('Are you sure you want to delete # {0}?', $cd->slug)]) ?>
                 </td>

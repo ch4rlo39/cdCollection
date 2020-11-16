@@ -201,3 +201,9 @@ Type::build('timestamp')
 //Inflector::rules('irregular', ['red' => 'redlings']);
 //Inflector::rules('uninflected', ['dontinflectme']);
 //Inflector::rules('transliteration', ['/å/' => 'aa']);
+
+
+//CakePdf configuration
+Configure::write('CakePdf', [
+    'engine' => 'CakePdf.Mpdf'
+]);

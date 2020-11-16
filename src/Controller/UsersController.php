@@ -18,6 +18,7 @@ class UsersController extends AppController {
     
     public function initialize() {
         parent::initialize();
+        $this->viewBuilder()->setLayout('cakephp_default');
         $this->Auth->allow(['logout', 'add', 'confirm', 'userSendsConfirmationEmail']);
         $this->Auth->deny(['view','index']);
     }

@@ -52,6 +52,10 @@ class CdsTable extends Table
             'targetForeignKey' => 'cover_id',
             'joinTable' => 'cds_covers',
         ]);
+        $this->belongsTo('Artists', [
+            'foreignKey' => 'artist_id',
+            'joinType' => 'INNER',
+        ]);
     }
     
     public function beforeSave($event, $entity, $options) {
