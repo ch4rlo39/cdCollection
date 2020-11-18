@@ -44,7 +44,7 @@
                         <li>Constater la modification du Genre Family</li>
                     </ol>
                 </li><br>
-                <li>Interface avec préfize de routage "Admin" : 
+                <li>Interface avec préfixe de routage "Admin" : 
                     <ol>
                         <li>Utiliser l'option Admin du menu pour accéder à la liste des Genre Families en mode Admin avec le préfixe de routage "Admin"</li>
                     </ol>
