@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  lun. 16 nov. 2020 à 23:28
+-- Généré le :  jeu. 03 déc. 2020 à 21:22
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.3.11
 
@@ -228,7 +228,8 @@ INSERT INTO `genres` (`id`, `name`, `genre_family_id`, `genre_subfamily_id`) VAL
 (7, 'Alternative', 2, 3),
 (9, 'Old-school Hip Hop', 3, 5),
 (10, 'Rap', 3, 5),
-(12, 'Progressive Metal', 2, 4);
+(12, 'Progressive Metal', 2, 4),
+(13, 'Trap', 3, 5);
 
 -- --------------------------------------------------------
 
@@ -249,8 +250,7 @@ INSERT INTO `genre_families` (`id`, `name`) VALUES
 (1, 'Acoustic'),
 (2, 'Electric'),
 (3, 'Electronic'),
-(4, 'Symphonic'),
-(12, 'Test TP2');
+(4, 'Symphonic');
 
 -- --------------------------------------------------------
 
@@ -505,13 +505,13 @@ ALTER TABLE `covers`
 -- AUTO_INCREMENT pour la table `genres`
 --
 ALTER TABLE `genres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT pour la table `genre_families`
 --
 ALTER TABLE `genre_families`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT pour la table `genre_subfamilies`

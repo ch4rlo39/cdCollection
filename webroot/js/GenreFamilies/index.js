@@ -1,121 +1,128 @@
+var app = angular.module('app', []);
 
-// Update the genreFamilies data list
-function getGenreFamilies() {
-    $.ajax({
-        type: 'GET',
-        url: urlToRestApi,
-        dataType: "json",
-        success:
-                function (data) {
-                    var genreFamilyTable = $('#genreFamilyData');
-                    genreFamilyTable.empty();
-                    $.each(data.genreFamilies, function (key, value)
-                    {
-                        var editDeleteButtons = '</td><td>' +
-                                '<a href="javascript:void(0);" class="btn btn-warning" rowID="' +
-                                    value.id + 
-                                    '" data-type="edit" data-toggle="modal" data-target="#modalGenreFamilyAddEdit">' + 
-                                    'edit</a>' +
-                                '<a href="javascript:void(0);" class="btn btn-danger"' +
-                                    'onclick="return confirm(\'Are you sure to delete data?\') ?' + 
-                                    'genreFamilyAction(\'delete\', \'' + 
-                                    value.id + 
-                                    '\') : false;">delete</a>' +
-                                '</td></tr>';
-                        genreFamilyTable.append('<tr><td>' + value.id + '</td><td>' + value.name + '</td>' + editDeleteButtons);
- 
+app.controller('GenreFamilyCRUDCtrl', ['$scope', 'GenreFamilyCRUDService', function($scope, GenreFamilyCRUDService){
+        $scope.updateGenreFamily = function(genreFamily) {
+            GenreFamilyCRUDService.updateGenreFamily(genreFamily)
+                    .then(function success(response){
+                        $scope.message = 'Genre Family data updated!';
+                        $scope.errorMessage = '';
+                        $scope.getAllGenreFamilies();
+            },
+                function error(response) {
+                    $scope.errorMessage = 'Error updating Genre Family!';
+                    $scope.message = '';
+                });
+        }
+        
+        $scope.getGenreFamily = function(id) {
+            GenreFamilyCRUDService.getGenreFamily(id)
+                .then(function success(response) {
+                    $scope.genreFamily = response.data.genreFamily;
+                    $scope.genreFamily.id = id;
+                    $scope.message = '';
+                    $scope.errorMessage = '';
+            },
+                function error(response) {
+                    $scope.message = '';
+                    if(response.status === 404){
+                        $scope.errorMessage = 'Genre Family not found!';
+                    } else {
+                        $scope.errorMessage = 'Error getting Genre Family!';
+                    }
+                });
+        }
+        
+        $scope.addGenreFamily = function() {
+            if($scope.genreFamily != null && $scope.genreFamily.name){
+                GenreFamilyCRUDService.addGenreFamily($scope.genreFamily.name)
+                    .then(function success(response) {
+                        $scope.message = 'Genre Family added!';
+                        $scope.errorMessage = '';
+                        $scope.getAllGenreFamilies();
+                },
+                    function error(response){
+                       $scope.errorMessage = 'Error adding Genre Family!';
+                       $scope.message = '';
                     });
-
-                }
-
-    });
-}
-
- /* Function takes a jquery form
- and converts it to a JSON dictionary */
-function convertFormToJSON(form) {
-    var array = $(form).serializeArray();
-    var json = {};
-
-    $.each(array, function () {
-        json[this.name] = this.value || '';
-    });
-
-    return json;
-}
-
-
-function genreFamilyAction(type, id) {
-    id = (typeof id == "undefined") ? '' : id;
-    var statusArr = {add: "added", edit: "updated", delete: "deleted"};
-    var requestType = '';
-    var genreFamilyData = '';
-    var ajaxUrl = urlToRestApi;
-    frmElement = $("#modalGenreFamilyAddEdit");
-    if (type == 'add') {
-        requestType = 'POST';
-        genreFamilyData = convertFormToJSON(frmElement.find('form'));
-    } else if (type == 'edit') {
-        requestType = 'PUT';
-        ajaxUrl = ajaxUrl + "/" + id;
-        genreFamilyData = convertFormToJSON(frmElement.find('form'));
-    } else {
-        requestType = 'DELETE';
-        ajaxUrl = ajaxUrl + "/" + id;
-    }
-    frmElement.find('.statusMsg').html('');
-    $.ajax({
-        type: requestType,
-        url: ajaxUrl,
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        data: JSON.stringify(genreFamilyData),
-        success: function (msg) {
-            if (msg) {
-                frmElement.find('.statusMsg').html('<p class="alert alert-success">GenreFamily data has been ' + statusArr[type] + ' successfully.</p>');
-                getGenreFamilies();
-                if (type == 'add') {
-                    frmElement.find('form')[0].reset();
-                }
             } else {
-                frmElement.find('.statusMsg').html('<p class="alert alert-danger">Some problem occurred, please try again.</p>');
+                $scope.errorMessage = 'Please enter a name!';
+                $scope.message = '';
             }
         }
-    });
-}
-
-// Fill the genreFamily's data in the edit form
-function editGenreFamily(id) {
-    $.ajax({
-        type: 'GET',
-        url: urlToRestApi + "/" + id,
-        dataType: 'JSON',
-        //data: 'action_type=data&id=' + id,
-        success: function (data) {
-            $('#id').val(data.genreFamily.id);
-            $('#name').val(data.genreFamily.name);
+        
+        $scope.deleteGenreFamily = function(id) {
+            GenreFamilyCRUDService.deleteGenreFamily(id)
+                .then(function success(response){
+                    $scope.message = 'Genre Family deleted!';
+                    $scope.genreFamily = null;
+                    $scope.errorMessage = '';
+                    $scope.getAllGenreFamilies();
+            },
+                function error(response){
+                   $scope.errorMessage = 'Error deleting Genre Family!';
+                   $scope.message = '';
+                });
         }
-    });
-}
-
-// Actions on modal show and hidden events
-$(function () {
-    $('#modalGenreFamilyAddEdit').on('show.bs.modal', function (e) {
-        var type = $(e.relatedTarget).attr('data-type');
-        var genreFamilyFunc = "genreFamilyAction('add');";
-        $('.modal-title').html('Add new genre family');
-        if (type == 'edit') {
-            var rowId = $(e.relatedTarget).attr('rowId');
-            genreFamilyFunc = "genreFamilyAction('edit', " + rowId + ");";
-            $('.modal-title').html('Edit genre family');
-            editGenreFamily(rowId);
+        
+        $scope.getAllGenreFamilies = function(){
+            GenreFamilyCRUDService.getAllGenreFamilies()
+                .then(function success(response) {
+                    $scope.genreFamilies = response.data.genreFamilies;
+                    $scope.message = '';
+                    $scope.errorMessage = '';
+            },
+                function error(response){
+                   $scope.message = '';
+                   $scope.errorMessage = 'Error getting Genre Families!';
+                });
         }
-        $('#genreFamilySubmit').attr("onclick", genreFamilyFunc);
-    });
+}]);
 
-    $('#modalGenreFamilyAddEdit').on('hidden.bs.modal', function () {
-        $('#genreFamilySubmit').attr("onclick", "");
-        $(this).find('form')[0].reset();
-        $(this).find('.statusMsg').html('');
-    });
-});
+app.service('GenreFamilyCRUDService', ['$http', function($http) {
+        this.getGenreFamily = function getGenreFamily(genreFamilyId) {
+            return $http({
+                method: 'GET',
+                url: urlToRestApi + '/' + genreFamilyId,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            });
+        }
+        
+        this.addGenreFamily = function addGenreFamily(name) {
+            return $http({
+                method: 'POST',
+                url: urlToRestApi,
+                data: {name: name},
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            });
+        }
+        
+        this.deleteGenreFamily = function deleteGenreFamily(id) {
+            return $http({
+                method: 'DELETE',
+                url: urlToRestApi + '/' + id,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            })
+        }
+
+        this.updateGenreFamily = function updateGenreFamily(genreFamily) {
+            return $http({
+                method: 'PATCH',
+                url: urlToRestApi + '/' + genreFamily.id,
+                data: {name: genreFamily.name},
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            })
+        }
+
+        this.getAllGenreFamilies = function getAllGenreFamilies() {
+            return $http({
+                method: 'GET',
+                url: urlToRestApi,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            });
+        }
+}]);

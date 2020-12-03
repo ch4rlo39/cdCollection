@@ -16,8 +16,18 @@ class GenreFamiliesController extends AppController
     public function initialize(){
         parent::initialize();
         $this->viewBuilder()->setLayout('cakephp_default');
-        $this->Auth->allow(['index', 'add', 'edit', 'delete']);
+        $this->Auth->allow(['index', 'add', 'edit', 'delete', 'getGenreFamilies']);
     }
+    
+    public function getGenreFamilies() {
+        $genreFamilies = $this->GenreFamilies->find('all',
+                ['contain' => ['GenreSubfamilies']]);
+        $this->set([
+            'genreFamilies' => $genreFamilies,
+            '_serialize' => ['genreFamilies']
+        ]);
+    }
+    
     /**
      * Index method
      *
