@@ -8,6 +8,7 @@ class GenreFamiliesController extends AppController {
     public function initialize() {
         parent::initialize();
         $this->loadComponent('RequestHandler');
+        $this->Auth->allow(['index']);
     }
     
     public function index() {

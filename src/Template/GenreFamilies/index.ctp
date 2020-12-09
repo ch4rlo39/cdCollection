@@ -7,23 +7,46 @@ $urlToRestApi = $this->Url->build('/api/genre_families', true);
 echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['block' => true]);
 echo $this->Html->script('GenreFamilies/index', ['block' => 'scriptBottom']);
 ?>
+<!-- salt = 
+<?php
+use Cake\Utility\Security;
+echo Security::salt();
+?>
+-->
+
 <h1>Genre Families</h1> <hr>
 <div ng-app="app" ng-controller="GenreFamilyCRUDCtrl">
+    <table>
+        <tr>
+            <td width="200">Username :</td>
+            <td><input type="text" id="username" ng-model="user.username" /></td>
+        </tr>
+        <tr>
+            <td width="200">Password :</td>
+            <td><input type="text" id="password" ng-model="user.password" /></td>
+        </tr>
+    </table>
+    <button ng-click="login(user)">Login</button>
+    <button ng-click="logout()">Logout</button>
+    <button ng-click="changePassword(user.password)">Change password</button>  <hr>
+    
+    <p style="color: green">{{message}}</p>
+    <p style="color: red">{{errorMessage}}</p><hr>
+    
     <input type="hidden" id="id" ng-model="genreFamily.id" />
     <table>
         <tr>
-            <td width="100">Name:</td>
+            <td width="100">Name :</td>
             <td><input type="text" id="name" ng-model="genreFamily.name" /></td>
         </tr>
     </table>
     <br />
     
     <button ng-click="updateGenreFamily(genreFamily)">Update Genre Family</button>
-    <button ng-click="addGenreFamily(genreFamily.name)">Add Genre Family</button>
+    <button ng-click="addGenreFamily(genreFamily.name)">Add Genre Family</button> <hr>
     
     <br /> <br />
-    <p style="color: green">{{message}}</p>
-    <p style="color: red">{{errorMessage}}</p>
+    
     
     <table class="hoverable bordered">
         <thead>

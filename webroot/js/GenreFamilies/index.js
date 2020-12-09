@@ -1,8 +1,9 @@
 var app = angular.module('app', []);
+var urlToRestApiUsers = urlToRestApi.substring(0, urlToRestApi.lastIndexOf('/') + 1) + 'users';
 
-app.controller('GenreFamilyCRUDCtrl', ['$scope', 'GenreFamilyCRUDService', function($scope, GenreFamilyCRUDService){
+app.controller('GenreFamilyCRUDCtrl', ['$scope', 'GenreFamilyCRUDJwtService', function($scope, GenreFamilyCRUDJwtService){
         $scope.updateGenreFamily = function(genreFamily) {
-            GenreFamilyCRUDService.updateGenreFamily(genreFamily)
+            GenreFamilyCRUDJwtService.updateGenreFamily(genreFamily)
                     .then(function success(response){
                         $scope.message = 'Genre Family data updated!';
                         $scope.errorMessage = '';
@@ -15,7 +16,7 @@ app.controller('GenreFamilyCRUDCtrl', ['$scope', 'GenreFamilyCRUDService', funct
         }
         
         $scope.getGenreFamily = function(id) {
-            GenreFamilyCRUDService.getGenreFamily(id)
+            GenreFamilyCRUDJwtService.getGenreFamily(id)
                 .then(function success(response) {
                     $scope.genreFamily = response.data.genreFamily;
                     $scope.genreFamily.id = id;
@@ -34,7 +35,7 @@ app.controller('GenreFamilyCRUDCtrl', ['$scope', 'GenreFamilyCRUDService', funct
         
         $scope.addGenreFamily = function() {
             if($scope.genreFamily != null && $scope.genreFamily.name){
-                GenreFamilyCRUDService.addGenreFamily($scope.genreFamily.name)
+                GenreFamilyCRUDJwtService.addGenreFamily($scope.genreFamily.name)
                     .then(function success(response) {
                         $scope.message = 'Genre Family added!';
                         $scope.errorMessage = '';
@@ -51,7 +52,7 @@ app.controller('GenreFamilyCRUDCtrl', ['$scope', 'GenreFamilyCRUDService', funct
         }
         
         $scope.deleteGenreFamily = function(id) {
-            GenreFamilyCRUDService.deleteGenreFamily(id)
+            GenreFamilyCRUDJwtService.deleteGenreFamily(id)
                 .then(function success(response){
                     $scope.message = 'Genre Family deleted!';
                     $scope.genreFamily = null;
@@ -65,7 +66,7 @@ app.controller('GenreFamilyCRUDCtrl', ['$scope', 'GenreFamilyCRUDService', funct
         }
         
         $scope.getAllGenreFamilies = function(){
-            GenreFamilyCRUDService.getAllGenreFamilies()
+            GenreFamilyCRUDJwtService.getAllGenreFamilies()
                 .then(function success(response) {
                     $scope.genreFamilies = response.data.genreFamilies;
                     $scope.message = '';
@@ -76,15 +77,53 @@ app.controller('GenreFamilyCRUDCtrl', ['$scope', 'GenreFamilyCRUDService', funct
                    $scope.errorMessage = 'Error getting Genre Families!';
                 });
         }
+        
+        $scope.login = function () {
+            if ($scope.user != null && $scope.user.username) {
+                GenreFamilyCRUDJwtService.login($scope.user)
+                        .then(function success(response) {
+                            $scope.message = $scope.user.username + ' logged in!';
+                            $scope.errorMessage = '';
+                            localStorage.setItem('token', response.data.data.token);
+                            localStorage.setItem('user_id', response.data.data.id);
+                        },
+                                function error(response) {
+                                    $scope.errorMessage = 'Invalid username or password...';
+                                    $scope.message = '';
+                                });
+            } else {
+                $scope.errorMessage = 'Please enter a username';
+                $scope.message = '';
+            }
+
+        }
+        $scope.logout = function () {
+            localStorage.setItem('token', "no token");
+            localStorage.setItem('user', "no user");
+            $scope.message = 'User logged out!';
+            $scope.errorMessage = '';
+        }
+        $scope.changePassword = function () {
+            GenreFamilyCRUDJwtService.changePassword($scope.user.password)
+                    .then(function success(response) {
+                        $scope.message = 'Password updated!';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.errorMessage = 'Password couldn\'t be changed';
+                                $scope.message = '';
+                            });
+        }
 }]);
 
-app.service('GenreFamilyCRUDService', ['$http', function($http) {
+app.service('GenreFamilyCRUDJwtService', ['$http', function($http) {
         this.getGenreFamily = function getGenreFamily(genreFamilyId) {
             return $http({
                 method: 'GET',
                 url: urlToRestApi + '/' + genreFamilyId,
                 headers: { 'X-Requested-With' : 'XMLHttpRequest',
-                    'Accept' : 'application/json'}
+                    'Accept' : 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")}
             });
         }
         
@@ -94,7 +133,8 @@ app.service('GenreFamilyCRUDService', ['$http', function($http) {
                 url: urlToRestApi,
                 data: {name: name},
                 headers: { 'X-Requested-With' : 'XMLHttpRequest',
-                    'Accept' : 'application/json'}
+                    'Accept' : 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")}
             });
         }
         
@@ -103,7 +143,8 @@ app.service('GenreFamilyCRUDService', ['$http', function($http) {
                 method: 'DELETE',
                 url: urlToRestApi + '/' + id,
                 headers: { 'X-Requested-With' : 'XMLHttpRequest',
-                    'Accept' : 'application/json'}
+                    'Accept' : 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")}
             })
         }
 
@@ -113,7 +154,8 @@ app.service('GenreFamilyCRUDService', ['$http', function($http) {
                 url: urlToRestApi + '/' + genreFamily.id,
                 data: {name: genreFamily.name},
                 headers: { 'X-Requested-With' : 'XMLHttpRequest',
-                    'Accept' : 'application/json'}
+                    'Accept' : 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")}
             })
         }
 
@@ -124,5 +166,26 @@ app.service('GenreFamilyCRUDService', ['$http', function($http) {
                 headers: { 'X-Requested-With' : 'XMLHttpRequest',
                     'Accept' : 'application/json'}
             });
+        }
+        
+        this.login = function login(user) {
+            return $http({
+                method: 'POST',
+                url: urlToRestApiUsers + '/token',
+                data: {username: user.username, password: user.password},
+                headers: {'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'}
+            });
+        }
+        this.changePassword = function changePassword(password) {
+            return $http({
+                method: 'PATCH',
+                url: urlToRestApiUsers + '/' + localStorage.getItem("user_id"),
+                data: {password: password},
+                headers: {'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")
+                }
+            })
         }
 }]);
