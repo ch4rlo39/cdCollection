@@ -45,7 +45,7 @@ return [
             //'port' => 'non_standard_port_number',
             'username' => 'root',
             'password' => 'mysql',
-            'database' => 'cd_collection_v0_8_1',
+            'database' => 'cd_collection_v0_9_1',
             'log' => true,
             'url' => env('DATABASE_URL', null),
         ],

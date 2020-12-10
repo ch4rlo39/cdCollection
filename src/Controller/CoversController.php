@@ -15,7 +15,12 @@ class CoversController extends AppController
     
      public function initialize() {
          parent::initialize();
+         $this->Auth->allow('add');
          $this->viewBuilder()->setLayout('cakephp_default');
+     }
+     
+     public function isAuthorized($user){
+         return true;
      }
     /**
      * Index method
@@ -51,13 +56,13 @@ class CoversController extends AppController
     public function add()
     {
         $cover = $this->Covers->newEntity();
-        if ($this->request->is(['patch', 'post', 'put'])) {
+        if ($this->request->is('post') or $this->request->is('ajax')) {
             $coverRequest = $this->request->getData();
-            if(!empty($coverRequest['name']['name'])){
-                $fileName = $coverRequest['name']['name'];
+            if(!empty($coverRequest['file']['name'])){
+                $fileName = $coverRequest['file']['name'];
                 $uploadPath = 'covers/add/';
                 $uploadFile = $uploadPath . $fileName;
-                if(move_uploaded_file($coverRequest['name']['tmp_name'], 'img/' . $uploadFile)){
+                if(move_uploaded_file($coverRequest['file']['tmp_name'], 'img/' . $uploadFile)){
                     $cover = $this->Covers->newEntity();
                     $cover->name = $fileName;
                     $cover->path = $uploadPath;

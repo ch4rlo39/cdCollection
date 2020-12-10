@@ -1,6 +1,7 @@
 <?php
 echo $this->Html->script([
-    'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'
+    'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js',
+    'https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit'
         ], ['block' => 'scriptLibraries']
 );
 $urlToRestApi = $this->Url->build('/api/genre_families', true);
@@ -16,6 +17,8 @@ echo Security::salt();
 
 <h1>Genre Families</h1> <hr>
 <div ng-app="app" ng-controller="GenreFamilyCRUDCtrl">
+    <div id="example1"></div>
+    <p style="color:red;">{{captcha_status}}</p>
     <table>
         <tr>
             <td width="200">Username :</td>

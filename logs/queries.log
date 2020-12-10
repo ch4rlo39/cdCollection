@@ -763,3 +763,813 @@
 2020-12-09 18:25:00 Debug: duration=0 rows=0 COMMIT
 2020-12-09 18:25:07 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.username = 'jwtTest' AND Users.confirmed = 1) LIMIT 1
 2020-12-09 18:25:09 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.username = 'jwtTest' AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:49:25 Debug: duration=13 rows=8 SHOW FULL COLUMNS FROM `cds`
+2020-12-09 19:49:25 Debug: duration=7 rows=3 SHOW INDEXES FROM `cds`
+2020-12-09 19:49:25 Debug: duration=29 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_8_1' AND kcu.TABLE_NAME = 'cds' AND rc.TABLE_NAME = 'cds'
+2020-12-09 19:49:25 Debug: duration=6 rows=1 SHOW TABLE STATUS WHERE Name = 'cds'
+2020-12-09 19:49:25 Debug: duration=3 rows=9 SHOW FULL COLUMNS FROM `users`
+2020-12-09 19:49:25 Debug: duration=1 rows=2 SHOW INDEXES FROM `users`
+2020-12-09 19:49:25 Debug: duration=13 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_8_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 19:49:25 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 19:49:25 Debug: duration=3 rows=6 SHOW FULL COLUMNS FROM `covers`
+2020-12-09 19:49:25 Debug: duration=1 rows=1 SHOW INDEXES FROM `covers`
+2020-12-09 19:49:25 Debug: duration=14 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_8_1' AND kcu.TABLE_NAME = 'covers' AND rc.TABLE_NAME = 'covers'
+2020-12-09 19:49:25 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'covers'
+2020-12-09 19:49:25 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `artists`
+2020-12-09 19:49:25 Debug: duration=2 rows=1 SHOW INDEXES FROM `artists`
+2020-12-09 19:49:25 Debug: duration=12 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_8_1' AND kcu.TABLE_NAME = 'artists' AND rc.TABLE_NAME = 'artists'
+2020-12-09 19:49:25 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'artists'
+2020-12-09 19:49:25 Debug: duration=29 rows=9 SELECT Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed`, Artists.id AS `Artists__id`, Artists.name AS `Artists__name` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id) LIMIT 20 OFFSET 0
+2020-12-09 19:49:25 Debug: duration=2 rows=3 SHOW FULL COLUMNS FROM `cds_covers`
+2020-12-09 19:49:25 Debug: duration=2 rows=3 SHOW INDEXES FROM `cds_covers`
+2020-12-09 19:49:25 Debug: duration=12 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_8_1' AND kcu.TABLE_NAME = 'cds_covers' AND rc.TABLE_NAME = 'cds_covers'
+2020-12-09 19:49:25 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds_covers'
+2020-12-09 19:49:25 Debug: duration=6 rows=9 SELECT CdsCovers.id AS `Covers_CJoin__id`, CdsCovers.cd_id AS `Covers_CJoin__cd_id`, CdsCovers.cover_id AS `Covers_CJoin__cover_id`, Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers INNER JOIN cds_covers CdsCovers ON Covers.id = (CdsCovers.cover_id) WHERE CdsCovers.cd_id in (1,2,3,6,8,10,11,12,13)
+2020-12-09 19:49:25 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id)
+2020-12-09 19:49:28 Debug: duration=1 rows=9 SELECT Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed`, Artists.id AS `Artists__id`, Artists.name AS `Artists__name` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id) LIMIT 20 OFFSET 0
+2020-12-09 19:49:28 Debug: duration=2 rows=9 SELECT CdsCovers.id AS `Covers_CJoin__id`, CdsCovers.cd_id AS `Covers_CJoin__cd_id`, CdsCovers.cover_id AS `Covers_CJoin__cover_id`, Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers INNER JOIN cds_covers CdsCovers ON Covers.id = (CdsCovers.cover_id) WHERE CdsCovers.cd_id in (1,2,3,6,8,10,11,12,13)
+2020-12-09 19:49:28 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id)
+2020-12-09 19:49:29 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `genre_families`
+2020-12-09 19:49:29 Debug: duration=2 rows=1 SHOW INDEXES FROM `genre_families`
+2020-12-09 19:49:29 Debug: duration=12 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_8_1' AND kcu.TABLE_NAME = 'genre_families' AND rc.TABLE_NAME = 'genre_families'
+2020-12-09 19:49:29 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'genre_families'
+2020-12-09 19:49:29 Debug: duration=12 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:49:30 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:49:30 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:49:55 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.username = 'jwtTest' AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:50:00 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.username = 'jwtTest' AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:50:06 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.id = 17 AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:50:06 Debug: duration=0 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE Users.id = 17 LIMIT 1
+2020-12-09 19:50:06 Debug: duration=0 rows=0 BEGIN
+2020-12-09 19:50:06 Debug: duration=0 rows=1 UPDATE users SET password = '$2y$10$xDCpmrtFRv3O5km11uRv3O86vheigzzlklxU/9IDTaNeMlIolCaSC' , modified = '2020-12-09 19:50:06' WHERE id = 17
+2020-12-09 19:50:06 Debug: duration=0 rows=0 COMMIT
+2020-12-09 19:50:09 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:50:10 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:50:10 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:50:19 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.username = 'jwtTest' AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:50:22 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:50:23 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:50:23 Debug: duration=0 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:50:51 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:50:52 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:50:52 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:51:09 Debug: duration=0 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:51:09 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:51:13 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:51:13 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:51:13 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:51:42 Debug: duration=2 rows=9 SHOW FULL COLUMNS FROM `users`
+2020-12-09 19:51:42 Debug: duration=1 rows=2 SHOW INDEXES FROM `users`
+2020-12-09 19:51:42 Debug: duration=12 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_8_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 19:51:42 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 19:51:42 Debug: duration=0 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.username = 'charlo' AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:51:50 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.id = 1 AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:51:50 Debug: duration=0 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE Users.id = 1 LIMIT 1
+2020-12-09 19:51:50 Debug: duration=0 rows=0 BEGIN
+2020-12-09 19:51:50 Debug: duration=0 rows=1 UPDATE users SET password = '$2y$10$jJj4Imde2qrO4wAH3vNttOGCGChMUPl5onNsYyGB/jzrvljOO128S' , modified = '2020-12-09 19:51:50' WHERE id = 1
+2020-12-09 19:51:50 Debug: duration=0 rows=0 COMMIT
+2020-12-09 19:51:55 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.username = 'charlo' AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:51:57 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.username = 'charlo' AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:52:00 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.id = 1 AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:52:00 Debug: duration=0 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE Users.id = 1 LIMIT 1
+2020-12-09 19:52:00 Debug: duration=0 rows=0 BEGIN
+2020-12-09 19:52:00 Debug: duration=0 rows=1 UPDATE users SET password = '$2y$10$y0ipvgQH.ihGzPzfGr8YquruaBGksLbXxpkqrA3yXjyW1eaJX1CtW' , modified = '2020-12-09 19:52:00' WHERE id = 1
+2020-12-09 19:52:00 Debug: duration=0 rows=0 COMMIT
+2020-12-09 19:52:08 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.id = 1 AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:52:08 Debug: duration=2 rows=2 SHOW FULL COLUMNS FROM `genre_families`
+2020-12-09 19:52:08 Debug: duration=2 rows=1 SHOW INDEXES FROM `genre_families`
+2020-12-09 19:52:08 Debug: duration=17 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_8_1' AND kcu.TABLE_NAME = 'genre_families' AND rc.TABLE_NAME = 'genre_families'
+2020-12-09 19:52:08 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'genre_families'
+2020-12-09 19:52:08 Debug: duration=0 rows=0 BEGIN
+2020-12-09 19:52:08 Debug: duration=0 rows=1 INSERT INTO genre_families (name) VALUES ('Test TP3')
+2020-12-09 19:52:08 Debug: duration=0 rows=0 COMMIT
+2020-12-09 19:52:08 Debug: duration=1 rows=5 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:52:12 Debug: duration=0 rows=5 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:52:12 Debug: duration=1 rows=5 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:52:12 Debug: duration=1 rows=5 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:52:17 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.id = 1 AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:52:17 Debug: duration=0 rows=1 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies WHERE GenreFamilies.id = 30 LIMIT 1
+2020-12-09 19:52:27 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.id = 1 AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:52:27 Debug: duration=0 rows=1 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies WHERE GenreFamilies.id = 30 LIMIT 1
+2020-12-09 19:52:27 Debug: duration=0 rows=0 BEGIN
+2020-12-09 19:52:27 Debug: duration=0 rows=1 UPDATE genre_families SET name = 'Test TP3 mod' WHERE id = 30
+2020-12-09 19:52:27 Debug: duration=0 rows=0 COMMIT
+2020-12-09 19:52:28 Debug: duration=1 rows=5 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:52:29 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.id = 1 AND Users.confirmed = 1) LIMIT 1
+2020-12-09 19:52:29 Debug: duration=0 rows=1 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies WHERE GenreFamilies.id = 30 LIMIT 1
+2020-12-09 19:52:29 Debug: duration=0 rows=0 BEGIN
+2020-12-09 19:52:29 Debug: duration=1 rows=1 DELETE FROM genre_families WHERE id = 30
+2020-12-09 19:52:29 Debug: duration=0 rows=0 COMMIT
+2020-12-09 19:52:29 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-09 19:57:23 Debug: duration=4 rows=8 SHOW FULL COLUMNS FROM `cds`
+2020-12-09 19:57:23 Debug: duration=11 rows=3 SHOW INDEXES FROM `cds`
+2020-12-09 19:57:23 Debug: duration=14 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds' AND rc.TABLE_NAME = 'cds'
+2020-12-09 19:57:23 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'cds'
+2020-12-09 19:57:23 Debug: duration=2 rows=9 SHOW FULL COLUMNS FROM `users`
+2020-12-09 19:57:23 Debug: duration=5 rows=2 SHOW INDEXES FROM `users`
+2020-12-09 19:57:23 Debug: duration=14 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 19:57:23 Debug: duration=3 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 19:57:23 Debug: duration=3 rows=6 SHOW FULL COLUMNS FROM `covers`
+2020-12-09 19:57:23 Debug: duration=3 rows=1 SHOW INDEXES FROM `covers`
+2020-12-09 19:57:23 Debug: duration=14 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'covers' AND rc.TABLE_NAME = 'covers'
+2020-12-09 19:57:23 Debug: duration=3 rows=1 SHOW TABLE STATUS WHERE Name = 'covers'
+2020-12-09 19:57:23 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `artists`
+2020-12-09 19:57:23 Debug: duration=3 rows=1 SHOW INDEXES FROM `artists`
+2020-12-09 19:57:23 Debug: duration=14 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'artists' AND rc.TABLE_NAME = 'artists'
+2020-12-09 19:57:23 Debug: duration=3 rows=1 SHOW TABLE STATUS WHERE Name = 'artists'
+2020-12-09 19:57:23 Debug: duration=2 rows=9 SELECT Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed`, Artists.id AS `Artists__id`, Artists.name AS `Artists__name` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id) LIMIT 20 OFFSET 0
+2020-12-09 19:57:23 Debug: duration=2 rows=3 SHOW FULL COLUMNS FROM `cds_covers`
+2020-12-09 19:57:23 Debug: duration=7 rows=3 SHOW INDEXES FROM `cds_covers`
+2020-12-09 19:57:23 Debug: duration=15 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds_covers' AND rc.TABLE_NAME = 'cds_covers'
+2020-12-09 19:57:23 Debug: duration=3 rows=1 SHOW TABLE STATUS WHERE Name = 'cds_covers'
+2020-12-09 19:57:23 Debug: duration=1 rows=9 SELECT CdsCovers.id AS `Covers_CJoin__id`, CdsCovers.cd_id AS `Covers_CJoin__cd_id`, CdsCovers.cover_id AS `Covers_CJoin__cover_id`, Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers INNER JOIN cds_covers CdsCovers ON Covers.id = (CdsCovers.cover_id) WHERE CdsCovers.cd_id in (1,2,3,10,11,12,13,6,8)
+2020-12-09 19:57:23 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id)
+2020-12-09 19:57:27 Debug: duration=1 rows=1 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers WHERE Covers.id = 11 LIMIT 1
+2020-12-09 19:57:27 Debug: duration=1 rows=1 SELECT CdsCovers.id AS `Cds_CJoin__id`, CdsCovers.cd_id AS `Cds_CJoin__cd_id`, CdsCovers.cover_id AS `Cds_CJoin__cover_id`, Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id` FROM cds Cds INNER JOIN cds_covers CdsCovers ON Cds.id = (CdsCovers.cd_id) WHERE CdsCovers.cover_id in (11)
+2020-12-09 20:05:32 Debug: duration=2 rows=8 SHOW FULL COLUMNS FROM `cds`
+2020-12-09 20:05:32 Debug: duration=2 rows=3 SHOW INDEXES FROM `cds`
+2020-12-09 20:05:32 Debug: duration=13 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds' AND rc.TABLE_NAME = 'cds'
+2020-12-09 20:05:32 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'cds'
+2020-12-09 20:05:32 Debug: duration=1 rows=9 SHOW FULL COLUMNS FROM `users`
+2020-12-09 20:05:32 Debug: duration=2 rows=2 SHOW INDEXES FROM `users`
+2020-12-09 20:05:32 Debug: duration=13 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-09 20:05:32 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-09 20:05:32 Debug: duration=1 rows=6 SHOW FULL COLUMNS FROM `covers`
+2020-12-09 20:05:32 Debug: duration=1 rows=1 SHOW INDEXES FROM `covers`
+2020-12-09 20:05:32 Debug: duration=14 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'covers' AND rc.TABLE_NAME = 'covers'
+2020-12-09 20:05:32 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'covers'
+2020-12-09 20:05:32 Debug: duration=1 rows=2 SHOW FULL COLUMNS FROM `artists`
+2020-12-09 20:05:32 Debug: duration=2 rows=1 SHOW INDEXES FROM `artists`
+2020-12-09 20:05:32 Debug: duration=13 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'artists' AND rc.TABLE_NAME = 'artists'
+2020-12-09 20:05:32 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'artists'
+2020-12-09 20:05:32 Debug: duration=1 rows=9 SELECT Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed`, Artists.id AS `Artists__id`, Artists.name AS `Artists__name` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id) LIMIT 20 OFFSET 0
+2020-12-09 20:05:32 Debug: duration=2 rows=3 SHOW FULL COLUMNS FROM `cds_covers`
+2020-12-09 20:05:32 Debug: duration=2 rows=3 SHOW INDEXES FROM `cds_covers`
+2020-12-09 20:05:32 Debug: duration=13 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds_covers' AND rc.TABLE_NAME = 'cds_covers'
+2020-12-09 20:05:32 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds_covers'
+2020-12-09 20:05:32 Debug: duration=1 rows=9 SELECT CdsCovers.id AS `Covers_CJoin__id`, CdsCovers.cd_id AS `Covers_CJoin__cd_id`, CdsCovers.cover_id AS `Covers_CJoin__cover_id`, Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers INNER JOIN cds_covers CdsCovers ON Covers.id = (CdsCovers.cover_id) WHERE CdsCovers.cd_id in (1,2,3,6,8,10,11,12,13)
+2020-12-09 20:05:32 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id)
+2020-12-09 20:05:33 Debug: duration=1 rows=9 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers LIMIT 20 OFFSET 0
+2020-12-09 20:05:33 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM covers Covers
+2020-12-09 20:32:45 Debug: duration=2 rows=6 SHOW FULL COLUMNS FROM `covers`
+2020-12-09 20:32:45 Debug: duration=1 rows=1 SHOW INDEXES FROM `covers`
+2020-12-09 20:32:45 Debug: duration=14 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'covers' AND rc.TABLE_NAME = 'covers'
+2020-12-09 20:32:45 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'covers'
+2020-12-09 20:32:45 Debug: duration=1 rows=9 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers LIMIT 20 OFFSET 0
+2020-12-09 20:32:45 Debug: duration=3 rows=1 SELECT (COUNT(*)) AS `count` FROM covers Covers
+2020-12-09 20:32:48 Debug: duration=1 rows=9 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers LIMIT 20 OFFSET 0
+2020-12-09 20:32:48 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM covers Covers
+2020-12-09 20:33:55 Debug: duration=0 rows=0 BEGIN
+2020-12-09 20:33:55 Debug: duration=0 rows=1 INSERT INTO covers (name, path, created, modified) VALUES ('dim_Episode2.jpg', 'covers/add/', '2020-12-09 20:33:55', '2020-12-09 20:33:55')
+2020-12-09 20:33:55 Debug: duration=0 rows=0 COMMIT
+2020-12-09 20:33:55 Debug: duration=1 rows=10 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers LIMIT 20 OFFSET 0
+2020-12-09 20:33:55 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM covers Covers
+2020-12-09 20:33:55 Debug: duration=1 rows=10 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers LIMIT 20 OFFSET 0
+2020-12-09 20:33:55 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM covers Covers
+2020-12-09 20:34:29 Debug: duration=4 rows=8 SHOW FULL COLUMNS FROM `cds`
+2020-12-09 20:34:29 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds`
+2020-12-09 20:34:29 Debug: duration=16 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds' AND rc.TABLE_NAME = 'cds'
+2020-12-09 20:34:29 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds'
+2020-12-09 20:34:29 Debug: duration=0 rows=1 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers WHERE Covers.id = 13 LIMIT 1
+2020-12-09 20:34:29 Debug: duration=1 rows=3 SHOW FULL COLUMNS FROM `cds_covers`
+2020-12-09 20:34:29 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds_covers`
+2020-12-09 20:34:29 Debug: duration=15 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds_covers' AND rc.TABLE_NAME = 'cds_covers'
+2020-12-09 20:34:29 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds_covers'
+2020-12-09 20:34:29 Debug: duration=1 rows=0 SELECT CdsCovers.id AS `Cds_CJoin__id`, CdsCovers.cd_id AS `Cds_CJoin__cd_id`, CdsCovers.cover_id AS `Cds_CJoin__cover_id`, Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id` FROM cds Cds INNER JOIN cds_covers CdsCovers ON Cds.id = (CdsCovers.cd_id) WHERE CdsCovers.cover_id in (13)
+2020-12-09 20:34:35 Debug: duration=1 rows=10 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers LIMIT 20 OFFSET 0
+2020-12-09 20:34:35 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM covers Covers
+2020-12-10 00:45:39 Debug: duration=13 rows=8 SHOW FULL COLUMNS FROM `cds`
+2020-12-10 00:45:39 Debug: duration=7 rows=3 SHOW INDEXES FROM `cds`
+2020-12-10 00:45:39 Debug: duration=33 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds' AND rc.TABLE_NAME = 'cds'
+2020-12-10 00:45:39 Debug: duration=6 rows=1 SHOW TABLE STATUS WHERE Name = 'cds'
+2020-12-10 00:45:39 Debug: duration=3 rows=9 SHOW FULL COLUMNS FROM `users`
+2020-12-10 00:45:39 Debug: duration=2 rows=2 SHOW INDEXES FROM `users`
+2020-12-10 00:45:39 Debug: duration=15 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-10 00:45:39 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-10 00:45:39 Debug: duration=3 rows=6 SHOW FULL COLUMNS FROM `covers`
+2020-12-10 00:45:39 Debug: duration=2 rows=1 SHOW INDEXES FROM `covers`
+2020-12-10 00:45:39 Debug: duration=14 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'covers' AND rc.TABLE_NAME = 'covers'
+2020-12-10 00:45:39 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'covers'
+2020-12-10 00:45:39 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `artists`
+2020-12-10 00:45:39 Debug: duration=2 rows=1 SHOW INDEXES FROM `artists`
+2020-12-10 00:45:39 Debug: duration=15 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'artists' AND rc.TABLE_NAME = 'artists'
+2020-12-10 00:45:39 Debug: duration=2 rows=1 SHOW TABLE STATUS WHERE Name = 'artists'
+2020-12-10 00:45:39 Debug: duration=24 rows=9 SELECT Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed`, Artists.id AS `Artists__id`, Artists.name AS `Artists__name` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id) LIMIT 20 OFFSET 0
+2020-12-10 00:45:39 Debug: duration=2 rows=3 SHOW FULL COLUMNS FROM `cds_covers`
+2020-12-10 00:45:39 Debug: duration=2 rows=3 SHOW INDEXES FROM `cds_covers`
+2020-12-10 00:45:39 Debug: duration=15 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds_covers' AND rc.TABLE_NAME = 'cds_covers'
+2020-12-10 00:45:39 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds_covers'
+2020-12-10 00:45:39 Debug: duration=4 rows=9 SELECT CdsCovers.id AS `Covers_CJoin__id`, CdsCovers.cd_id AS `Covers_CJoin__cd_id`, CdsCovers.cover_id AS `Covers_CJoin__cover_id`, Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers INNER JOIN cds_covers CdsCovers ON Covers.id = (CdsCovers.cover_id) WHERE CdsCovers.cd_id in (1,2,3,6,8,10,11,12,13)
+2020-12-10 00:45:39 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id)
+2020-12-10 00:45:49 Debug: duration=1 rows=10 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers LIMIT 20 OFFSET 0
+2020-12-10 00:45:49 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM covers Covers
+2020-12-10 00:47:16 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE Users.email = 'charlo@hotmail.com' LIMIT 1
+2020-12-10 00:47:16 Debug: duration=1 rows=10 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers LIMIT 20 OFFSET 0
+2020-12-10 00:47:17 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM covers Covers
+2020-12-10 00:47:20 Debug: duration=1 rows=1 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers WHERE Covers.id = 13 LIMIT 1
+2020-12-10 00:47:20 Debug: duration=0 rows=0 BEGIN
+2020-12-10 00:47:20 Debug: duration=1 rows=0 DELETE FROM cds_covers WHERE cover_id = 13
+2020-12-10 00:47:20 Debug: duration=0 rows=1 DELETE FROM covers WHERE id = 13
+2020-12-10 00:47:20 Debug: duration=0 rows=0 COMMIT
+2020-12-10 00:47:20 Debug: duration=1 rows=9 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers LIMIT 20 OFFSET 0
+2020-12-10 00:47:20 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM covers Covers
+2020-12-10 00:47:37 Debug: duration=0 rows=0 BEGIN
+2020-12-10 00:47:37 Debug: duration=0 rows=1 INSERT INTO covers (name, path, created, modified) VALUES ('dim_Episode2.jpg', 'covers/add/', '2020-12-10 00:47:37', '2020-12-10 00:47:37')
+2020-12-10 00:47:37 Debug: duration=0 rows=0 COMMIT
+2020-12-10 00:47:37 Debug: duration=1 rows=10 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers LIMIT 20 OFFSET 0
+2020-12-10 00:47:37 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM covers Covers
+2020-12-10 00:47:37 Debug: duration=1 rows=10 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers LIMIT 20 OFFSET 0
+2020-12-10 00:47:37 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM covers Covers
+2020-12-10 00:47:45 Debug: duration=2 rows=8 SHOW FULL COLUMNS FROM `cds`
+2020-12-10 00:47:45 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds`
+2020-12-10 00:47:45 Debug: duration=14 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds' AND rc.TABLE_NAME = 'cds'
+2020-12-10 00:47:45 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds'
+2020-12-10 00:47:45 Debug: duration=1 rows=9 SHOW FULL COLUMNS FROM `users`
+2020-12-10 00:47:45 Debug: duration=1 rows=2 SHOW INDEXES FROM `users`
+2020-12-10 00:47:45 Debug: duration=13 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-10 00:47:45 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-10 00:47:45 Debug: duration=1 rows=6 SHOW FULL COLUMNS FROM `covers`
+2020-12-10 00:47:45 Debug: duration=2 rows=1 SHOW INDEXES FROM `covers`
+2020-12-10 00:47:45 Debug: duration=13 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'covers' AND rc.TABLE_NAME = 'covers'
+2020-12-10 00:47:45 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'covers'
+2020-12-10 00:47:45 Debug: duration=1 rows=2 SHOW FULL COLUMNS FROM `artists`
+2020-12-10 00:47:45 Debug: duration=1 rows=1 SHOW INDEXES FROM `artists`
+2020-12-10 00:47:45 Debug: duration=14 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'artists' AND rc.TABLE_NAME = 'artists'
+2020-12-10 00:47:45 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'artists'
+2020-12-10 00:47:45 Debug: duration=1 rows=9 SELECT Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed`, Artists.id AS `Artists__id`, Artists.name AS `Artists__name` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id) LIMIT 20 OFFSET 0
+2020-12-10 00:47:45 Debug: duration=1 rows=3 SHOW FULL COLUMNS FROM `cds_covers`
+2020-12-10 00:47:45 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds_covers`
+2020-12-10 00:47:45 Debug: duration=13 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds_covers' AND rc.TABLE_NAME = 'cds_covers'
+2020-12-10 00:47:45 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds_covers'
+2020-12-10 00:47:45 Debug: duration=1 rows=9 SELECT CdsCovers.id AS `Covers_CJoin__id`, CdsCovers.cd_id AS `Covers_CJoin__cd_id`, CdsCovers.cover_id AS `Covers_CJoin__cover_id`, Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers INNER JOIN cds_covers CdsCovers ON Covers.id = (CdsCovers.cover_id) WHERE CdsCovers.cd_id in (1,2,3,6,8,10,11,12,13)
+2020-12-10 00:47:45 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id)
+2020-12-10 00:47:48 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `genre_families`
+2020-12-10 00:47:48 Debug: duration=9 rows=1 SHOW INDEXES FROM `genre_families`
+2020-12-10 00:47:48 Debug: duration=12 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'genre_families' AND rc.TABLE_NAME = 'genre_families'
+2020-12-10 00:47:48 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'genre_families'
+2020-12-10 00:47:48 Debug: duration=12 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 00:47:49 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 00:47:49 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 00:47:59 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 00:47:59 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 00:47:59 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 00:48:08 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE (Users.username = 'jwtTest' AND Users.confirmed = 1) LIMIT 1
+2020-12-10 00:48:15 Debug: duration=1 rows=9 SELECT Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed`, Artists.id AS `Artists__id`, Artists.name AS `Artists__name` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id) LIMIT 20 OFFSET 0
+2020-12-10 00:48:15 Debug: duration=1 rows=9 SELECT CdsCovers.id AS `Covers_CJoin__id`, CdsCovers.cd_id AS `Covers_CJoin__cd_id`, CdsCovers.cover_id AS `Covers_CJoin__cover_id`, Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers INNER JOIN cds_covers CdsCovers ON Covers.id = (CdsCovers.cover_id) WHERE CdsCovers.cd_id in (1,2,3,6,8,10,11,12,13)
+2020-12-10 00:48:15 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id)
+2020-12-10 00:48:18 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 00:48:18 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 00:48:18 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 00:48:20 Debug: duration=1 rows=9 SELECT Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed`, Artists.id AS `Artists__id`, Artists.name AS `Artists__name` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id) LIMIT 20 OFFSET 0
+2020-12-10 00:48:20 Debug: duration=1 rows=9 SELECT CdsCovers.id AS `Covers_CJoin__id`, CdsCovers.cd_id AS `Covers_CJoin__cd_id`, CdsCovers.cover_id AS `Covers_CJoin__cover_id`, Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers INNER JOIN cds_covers CdsCovers ON Covers.id = (CdsCovers.cover_id) WHERE CdsCovers.cd_id in (1,2,3,6,8,10,11,12,13)
+2020-12-10 00:48:20 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id)
+2020-12-10 01:11:34 Debug: duration=2 rows=8 SHOW FULL COLUMNS FROM `cds`
+2020-12-10 01:11:34 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds`
+2020-12-10 01:11:34 Debug: duration=34 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds' AND rc.TABLE_NAME = 'cds'
+2020-12-10 01:11:35 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds'
+2020-12-10 01:11:35 Debug: duration=1 rows=9 SHOW FULL COLUMNS FROM `users`
+2020-12-10 01:11:35 Debug: duration=1 rows=2 SHOW INDEXES FROM `users`
+2020-12-10 01:11:35 Debug: duration=15 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-10 01:11:35 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-10 01:11:35 Debug: duration=1 rows=6 SHOW FULL COLUMNS FROM `covers`
+2020-12-10 01:11:35 Debug: duration=1 rows=1 SHOW INDEXES FROM `covers`
+2020-12-10 01:11:35 Debug: duration=12 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'covers' AND rc.TABLE_NAME = 'covers'
+2020-12-10 01:11:35 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'covers'
+2020-12-10 01:11:35 Debug: duration=1 rows=2 SHOW FULL COLUMNS FROM `artists`
+2020-12-10 01:11:35 Debug: duration=2 rows=1 SHOW INDEXES FROM `artists`
+2020-12-10 01:11:35 Debug: duration=12 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'artists' AND rc.TABLE_NAME = 'artists'
+2020-12-10 01:11:35 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'artists'
+2020-12-10 01:11:35 Debug: duration=1 rows=9 SELECT Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed`, Artists.id AS `Artists__id`, Artists.name AS `Artists__name` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id) LIMIT 20 OFFSET 0
+2020-12-10 01:11:35 Debug: duration=1 rows=3 SHOW FULL COLUMNS FROM `cds_covers`
+2020-12-10 01:11:35 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds_covers`
+2020-12-10 01:11:35 Debug: duration=12 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds_covers' AND rc.TABLE_NAME = 'cds_covers'
+2020-12-10 01:11:35 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds_covers'
+2020-12-10 01:11:35 Debug: duration=6 rows=9 SELECT CdsCovers.id AS `Covers_CJoin__id`, CdsCovers.cd_id AS `Covers_CJoin__cd_id`, CdsCovers.cover_id AS `Covers_CJoin__cover_id`, Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers INNER JOIN cds_covers CdsCovers ON Covers.id = (CdsCovers.cover_id) WHERE CdsCovers.cd_id in (1,2,3,6,8,10,11,12,13)
+2020-12-10 01:11:35 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id)
+2020-12-10 03:15:27 Debug: duration=3 rows=2 SHOW FULL COLUMNS FROM `genre_families`
+2020-12-10 03:15:27 Debug: duration=2 rows=1 SHOW INDEXES FROM `genre_families`
+2020-12-10 03:15:27 Debug: duration=16 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'genre_families' AND rc.TABLE_NAME = 'genre_families'
+2020-12-10 03:15:27 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'genre_families'
+2020-12-10 03:15:27 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 03:15:28 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 03:15:28 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 03:15:36 Debug: duration=2 rows=9 SHOW FULL COLUMNS FROM `users`
+2020-12-10 03:15:36 Debug: duration=1 rows=2 SHOW INDEXES FROM `users`
+2020-12-10 03:15:36 Debug: duration=12 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-10 03:15:36 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-10 03:15:36 Debug: duration=1 rows=1 SELECT Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed` FROM users Users WHERE Users.email = 'charlo@hotmail.com' LIMIT 1
+2020-12-10 03:15:36 Debug: duration=2 rows=8 SHOW FULL COLUMNS FROM `cds`
+2020-12-10 03:15:36 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds`
+2020-12-10 03:15:36 Debug: duration=13 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds' AND rc.TABLE_NAME = 'cds'
+2020-12-10 03:15:36 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds'
+2020-12-10 03:15:36 Debug: duration=1 rows=3 SHOW FULL COLUMNS FROM `genre_subfamilies`
+2020-12-10 03:15:36 Debug: duration=1 rows=2 SHOW INDEXES FROM `genre_subfamilies`
+2020-12-10 03:15:36 Debug: duration=12 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'genre_subfamilies' AND rc.TABLE_NAME = 'genre_subfamilies'
+2020-12-10 03:15:36 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'genre_subfamilies'
+2020-12-10 03:15:36 Debug: duration=1 rows=4 SHOW FULL COLUMNS FROM `genres`
+2020-12-10 03:15:36 Debug: duration=1 rows=3 SHOW INDEXES FROM `genres`
+2020-12-10 03:15:36 Debug: duration=12 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'genres' AND rc.TABLE_NAME = 'genres'
+2020-12-10 03:15:36 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'genres'
+2020-12-10 03:15:36 Debug: duration=1 rows=9 SELECT Cds.id AS `Cds__id`, Cds.title AS `Cds__title` FROM cds Cds LIMIT 200
+2020-12-10 03:15:36 Debug: duration=0 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies LIMIT 200
+2020-12-10 03:15:36 Debug: duration=1 rows=8 SELECT GenreSubfamilies.id AS `GenreSubfamilies__id`, GenreSubfamilies.name AS `GenreSubfamilies__name` FROM genre_subfamilies GenreSubfamilies LIMIT 200
+2020-12-10 03:15:36 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 03:15:36 Debug: duration=5 rows=8 SELECT GenreSubfamilies.id AS `GenreSubfamilies__id`, GenreSubfamilies.name AS `GenreSubfamilies__name`, GenreSubfamilies.genre_family_id AS `GenreSubfamilies__genre_family_id` FROM genre_subfamilies GenreSubfamilies WHERE GenreSubfamilies.genre_family_id in (1,2,3,4)
+2020-12-10 03:18:39 Debug: duration=2 rows=4 SHOW FULL COLUMNS FROM `genres`
+2020-12-10 03:18:39 Debug: duration=2 rows=3 SHOW INDEXES FROM `genres`
+2020-12-10 03:18:39 Debug: duration=13 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'genres' AND rc.TABLE_NAME = 'genres'
+2020-12-10 03:18:39 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'genres'
+2020-12-10 03:18:39 Debug: duration=1 rows=11 SELECT Genres.id AS `Genres__id`, Genres.name AS `Genres__name`, Genres.genre_family_id AS `Genres__genre_family_id`, Genres.genre_subfamily_id AS `Genres__genre_subfamily_id` FROM genres Genres LIMIT 20 OFFSET 0
+2020-12-10 03:18:39 Debug: duration=2 rows=1 SELECT (COUNT(*)) AS `count` FROM genres Genres
+2020-12-10 03:19:05 Debug: duration=2 rows=8 SHOW FULL COLUMNS FROM `cds`
+2020-12-10 03:19:05 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds`
+2020-12-10 03:19:05 Debug: duration=12 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds' AND rc.TABLE_NAME = 'cds'
+2020-12-10 03:19:05 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds'
+2020-12-10 03:19:05 Debug: duration=0 rows=1 SELECT Genres.id AS `Genres__id`, Genres.name AS `Genres__name`, Genres.genre_family_id AS `Genres__genre_family_id`, Genres.genre_subfamily_id AS `Genres__genre_subfamily_id` FROM genres Genres WHERE Genres.id = 1 LIMIT 1
+2020-12-10 03:19:05 Debug: duration=1 rows=3 SHOW FULL COLUMNS FROM `cds_genres`
+2020-12-10 03:19:05 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds_genres`
+2020-12-10 03:19:05 Debug: duration=12 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds_genres' AND rc.TABLE_NAME = 'cds_genres'
+2020-12-10 03:19:05 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds_genres'
+2020-12-10 03:19:05 Debug: duration=6 rows=4 SELECT CdsGenres.id AS `Cds_CJoin__id`, CdsGenres.cd_id AS `Cds_CJoin__cd_id`, CdsGenres.genre_id AS `Cds_CJoin__genre_id`, Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id` FROM cds Cds INNER JOIN cds_genres CdsGenres ON Cds.id = (CdsGenres.cd_id) WHERE CdsGenres.genre_id in (1)
+2020-12-10 03:19:06 Debug: duration=1 rows=2 SHOW FULL COLUMNS FROM `genre_families`
+2020-12-10 03:19:06 Debug: duration=1 rows=1 SHOW INDEXES FROM `genre_families`
+2020-12-10 03:19:06 Debug: duration=12 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'genre_families' AND rc.TABLE_NAME = 'genre_families'
+2020-12-10 03:19:06 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'genre_families'
+2020-12-10 03:19:06 Debug: duration=1 rows=3 SHOW FULL COLUMNS FROM `genre_subfamilies`
+2020-12-10 03:19:06 Debug: duration=1 rows=2 SHOW INDEXES FROM `genre_subfamilies`
+2020-12-10 03:19:06 Debug: duration=12 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'genre_subfamilies' AND rc.TABLE_NAME = 'genre_subfamilies'
+2020-12-10 03:19:06 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'genre_subfamilies'
+2020-12-10 03:19:06 Debug: duration=0 rows=9 SELECT Cds.id AS `Cds__id`, Cds.title AS `Cds__title` FROM cds Cds LIMIT 200
+2020-12-10 03:19:06 Debug: duration=0 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies LIMIT 200
+2020-12-10 03:19:06 Debug: duration=0 rows=8 SELECT GenreSubfamilies.id AS `GenreSubfamilies__id`, GenreSubfamilies.name AS `GenreSubfamilies__name` FROM genre_subfamilies GenreSubfamilies LIMIT 200
+2020-12-10 03:19:06 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 03:19:06 Debug: duration=0 rows=8 SELECT GenreSubfamilies.id AS `GenreSubfamilies__id`, GenreSubfamilies.name AS `GenreSubfamilies__name`, GenreSubfamilies.genre_family_id AS `GenreSubfamilies__genre_family_id` FROM genre_subfamilies GenreSubfamilies WHERE GenreSubfamilies.genre_family_id in (1,2,3,4)
+2020-12-10 03:38:29 Debug: duration=2 rows=2 SHOW FULL COLUMNS FROM `genre_families`
+2020-12-10 03:38:29 Debug: duration=1 rows=1 SHOW INDEXES FROM `genre_families`
+2020-12-10 03:38:29 Debug: duration=14 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'genre_families' AND rc.TABLE_NAME = 'genre_families'
+2020-12-10 03:38:29 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'genre_families'
+2020-12-10 03:38:29 Debug: duration=0 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 03:38:30 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 03:38:30 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 03:59:01 Debug: duration=2 rows=2 SHOW FULL COLUMNS FROM `genre_families`
+2020-12-10 03:59:01 Debug: duration=2 rows=1 SHOW INDEXES FROM `genre_families`
+2020-12-10 03:59:02 Debug: duration=13 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'genre_families' AND rc.TABLE_NAME = 'genre_families'
+2020-12-10 03:59:02 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'genre_families'
+2020-12-10 03:59:02 Debug: duration=0 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 03:59:02 Debug: duration=1 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 03:59:02 Debug: duration=0 rows=4 SELECT GenreFamilies.id AS `GenreFamilies__id`, GenreFamilies.name AS `GenreFamilies__name` FROM genre_families GenreFamilies
+2020-12-10 05:14:20 Debug: duration=2 rows=8 SHOW FULL COLUMNS FROM `cds`
+2020-12-10 05:14:20 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds`
+2020-12-10 05:14:20 Debug: duration=14 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds' AND rc.TABLE_NAME = 'cds'
+2020-12-10 05:14:20 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds'
+2020-12-10 05:14:20 Debug: duration=2 rows=9 SHOW FULL COLUMNS FROM `users`
+2020-12-10 05:14:20 Debug: duration=1 rows=2 SHOW INDEXES FROM `users`
+2020-12-10 05:14:20 Debug: duration=12 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-10 05:14:20 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-10 05:14:20 Debug: duration=1 rows=6 SHOW FULL COLUMNS FROM `covers`
+2020-12-10 05:14:20 Debug: duration=1 rows=1 SHOW INDEXES FROM `covers`
+2020-12-10 05:14:20 Debug: duration=13 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'covers' AND rc.TABLE_NAME = 'covers'
+2020-12-10 05:14:20 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'covers'
+2020-12-10 05:14:21 Debug: duration=1 rows=2 SHOW FULL COLUMNS FROM `artists`
+2020-12-10 05:14:21 Debug: duration=1 rows=1 SHOW INDEXES FROM `artists`
+2020-12-10 05:14:21 Debug: duration=13 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'artists' AND rc.TABLE_NAME = 'artists'
+2020-12-10 05:14:21 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'artists'
+2020-12-10 05:14:21 Debug: duration=3 rows=9 SELECT Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed`, Artists.id AS `Artists__id`, Artists.name AS `Artists__name` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id) LIMIT 20 OFFSET 0
+2020-12-10 05:14:21 Debug: duration=2 rows=3 SHOW FULL COLUMNS FROM `cds_covers`
+2020-12-10 05:14:21 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds_covers`
+2020-12-10 05:14:21 Debug: duration=13 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds_covers' AND rc.TABLE_NAME = 'cds_covers'
+2020-12-10 05:14:21 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds_covers'
+2020-12-10 05:14:21 Debug: duration=1 rows=9 SELECT CdsCovers.id AS `Covers_CJoin__id`, CdsCovers.cd_id AS `Covers_CJoin__cd_id`, CdsCovers.cover_id AS `Covers_CJoin__cover_id`, Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers INNER JOIN cds_covers CdsCovers ON Covers.id = (CdsCovers.cover_id) WHERE CdsCovers.cd_id in (1,2,3,6,8,10,11,12,13)
+2020-12-10 05:14:21 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id)
+2020-12-10 05:17:52 Debug: duration=2 rows=8 SHOW FULL COLUMNS FROM `cds`
+2020-12-10 05:17:52 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds`
+2020-12-10 05:17:52 Debug: duration=15 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds' AND rc.TABLE_NAME = 'cds'
+2020-12-10 05:17:52 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds'
+2020-12-10 05:17:52 Debug: duration=1 rows=9 SHOW FULL COLUMNS FROM `users`
+2020-12-10 05:17:52 Debug: duration=1 rows=2 SHOW INDEXES FROM `users`
+2020-12-10 05:17:52 Debug: duration=13 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-10 05:17:52 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-10 05:17:52 Debug: duration=1 rows=6 SHOW FULL COLUMNS FROM `covers`
+2020-12-10 05:17:52 Debug: duration=1 rows=1 SHOW INDEXES FROM `covers`
+2020-12-10 05:17:52 Debug: duration=13 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'covers' AND rc.TABLE_NAME = 'covers'
+2020-12-10 05:17:52 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'covers'
+2020-12-10 05:17:52 Debug: duration=1 rows=2 SHOW FULL COLUMNS FROM `artists`
+2020-12-10 05:17:52 Debug: duration=1 rows=1 SHOW INDEXES FROM `artists`
+2020-12-10 05:17:52 Debug: duration=13 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'artists' AND rc.TABLE_NAME = 'artists'
+2020-12-10 05:17:52 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'artists'
+2020-12-10 05:17:52 Debug: duration=1 rows=9 SELECT Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed`, Artists.id AS `Artists__id`, Artists.name AS `Artists__name` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id) LIMIT 20 OFFSET 0
+2020-12-10 05:17:52 Debug: duration=2 rows=3 SHOW FULL COLUMNS FROM `cds_covers`
+2020-12-10 05:17:52 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds_covers`
+2020-12-10 05:17:52 Debug: duration=13 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds_covers' AND rc.TABLE_NAME = 'cds_covers'
+2020-12-10 05:17:52 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds_covers'
+2020-12-10 05:17:52 Debug: duration=1 rows=9 SELECT CdsCovers.id AS `Covers_CJoin__id`, CdsCovers.cd_id AS `Covers_CJoin__cd_id`, CdsCovers.cover_id AS `Covers_CJoin__cover_id`, Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers INNER JOIN cds_covers CdsCovers ON Covers.id = (CdsCovers.cover_id) WHERE CdsCovers.cd_id in (1,2,3,6,8,10,11,12,13)
+2020-12-10 05:17:52 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id)
+2020-12-10 05:17:54 Debug: duration=1 rows=10 SELECT Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers LIMIT 20 OFFSET 0
+2020-12-10 05:17:54 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM covers Covers
+2020-12-10 05:23:30 Debug: duration=2 rows=8 SHOW FULL COLUMNS FROM `cds`
+2020-12-10 05:23:30 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds`
+2020-12-10 05:23:30 Debug: duration=13 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds' AND rc.TABLE_NAME = 'cds'
+2020-12-10 05:23:30 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds'
+2020-12-10 05:23:30 Debug: duration=1 rows=9 SHOW FULL COLUMNS FROM `users`
+2020-12-10 05:23:30 Debug: duration=1 rows=2 SHOW INDEXES FROM `users`
+2020-12-10 05:23:30 Debug: duration=12 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-12-10 05:23:30 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-12-10 05:23:30 Debug: duration=1 rows=6 SHOW FULL COLUMNS FROM `covers`
+2020-12-10 05:23:30 Debug: duration=1 rows=1 SHOW INDEXES FROM `covers`
+2020-12-10 05:23:30 Debug: duration=12 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'covers' AND rc.TABLE_NAME = 'covers'
+2020-12-10 05:23:30 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'covers'
+2020-12-10 05:23:30 Debug: duration=1 rows=2 SHOW FULL COLUMNS FROM `artists`
+2020-12-10 05:23:30 Debug: duration=1 rows=1 SHOW INDEXES FROM `artists`
+2020-12-10 05:23:30 Debug: duration=12 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'artists' AND rc.TABLE_NAME = 'artists'
+2020-12-10 05:23:30 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'artists'
+2020-12-10 05:23:30 Debug: duration=1 rows=9 SELECT Cds.id AS `Cds__id`, Cds.user_id AS `Cds__user_id`, Cds.title AS `Cds__title`, Cds.slug AS `Cds__slug`, Cds.released AS `Cds__released`, Cds.created AS `Cds__created`, Cds.modified AS `Cds__modified`, Cds.artist_id AS `Cds__artist_id`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.username AS `Users__username`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Users.uuid AS `Users__uuid`, Users.confirmed AS `Users__confirmed`, Artists.id AS `Artists__id`, Artists.name AS `Artists__name` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id) LIMIT 20 OFFSET 0
+2020-12-10 05:23:30 Debug: duration=1 rows=3 SHOW FULL COLUMNS FROM `cds_covers`
+2020-12-10 05:23:30 Debug: duration=1 rows=3 SHOW INDEXES FROM `cds_covers`
+2020-12-10 05:23:30 Debug: duration=13 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'cd_collection_v0_9_1' AND kcu.TABLE_NAME = 'cds_covers' AND rc.TABLE_NAME = 'cds_covers'
+2020-12-10 05:23:30 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'cds_covers'
+2020-12-10 05:23:30 Debug: duration=1 rows=9 SELECT CdsCovers.id AS `Covers_CJoin__id`, CdsCovers.cd_id AS `Covers_CJoin__cd_id`, CdsCovers.cover_id AS `Covers_CJoin__cover_id`, Covers.id AS `Covers__id`, Covers.name AS `Covers__name`, Covers.path AS `Covers__path`, Covers.created AS `Covers__created`, Covers.modified AS `Covers__modified`, Covers.status AS `Covers__status` FROM covers Covers INNER JOIN cds_covers CdsCovers ON Covers.id = (CdsCovers.cover_id) WHERE CdsCovers.cd_id in (1,2,3,6,8,10,11,12,13)
+2020-12-10 05:23:30 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM cds Cds INNER JOIN users Users ON Users.id = (Cds.user_id) INNER JOIN artists Artists ON Artists.id = (Cds.artist_id)

@@ -39,7 +39,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <nav class="top-bar expanded" data-topbar role="navigation">
             <ul class="title-area large-3 medium-4 columns">
                 <li class="name">
-                    <h1><?= $this->Html->link(__('CD Collection') . ' v0.8.1', '/'); ?><?php // echo " - " . $this->fetch('title');          ?></h1>
+                    <h1><?= $this->Html->link(__('CD Collection') . ' v0.9.1', '/'); ?><?php // echo " - " . $this->fetch('title');          ?></h1>
                 </li>
             </ul>
             <div class="top-bar-section">
